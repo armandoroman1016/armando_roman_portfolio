@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "name": "armando_roman_portfolio",
+    "builds": [{ "src": "armando_roman_portfolio/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "routes": [
+        { "src": "/(.*)", "dest": "armando_roman_portfolio/$1" }
+    ]
+}
