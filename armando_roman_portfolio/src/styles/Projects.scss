@@ -1,0 +1,50 @@
+.projects-section{
+    width: 100%;
+    height: 100%;
+    h1{
+        font-size:3.6rem;
+        text-align: center;
+        padding: 50px; 
+    }
+    .projects-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        .project-container{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            box-shadow: 0 0 5px #aaaaaa;
+            border-radius: 35px;
+            margin: 30px;
+            .project-header{
+                font-size:2.2rem;
+                width: 90%;
+                margin-left: 20px;
+            }
+            img{
+                width: 100%;
+                height:auto;
+            }
+            .project-description{
+                font-size:1.6rem;
+                line-height: 1.5;
+                width: 90%;
+                margin-left: 20px;
+
+            }
+            .project-links{
+                .project-link{
+                    margin: 0 0 20px 20px;
+                    a{
+                        font-size:1.4rem;
+                        text-decoration: none;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
