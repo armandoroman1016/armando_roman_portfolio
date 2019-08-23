@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import {TweenMax, Linear, TimelineMax, Bounce, Back, Power4 } from 'gsap';
-import background from '../assests/images/background.svg'
+import BackgroundLanding from '../assests/images/Background.js'
 import NavBar from './NavBar'
 
 const LandingPage = props => {
@@ -49,12 +49,15 @@ const LandingPage = props => {
         go()
     },[])
 
+    console.log(NavBar)
+    console.log(BackgroundLanding)
     return(
         <div className = 'landing-container' style = {{ 
             background : 
-            `url(${background}) right center` , 
+            `url(${BackgroundLanding}) right center` , 
             backgroundSize : '110%', 
             backgroundColor: '#56597a'}}>
+            <BackgroundLanding style = {{width: '100%', height: '100%'}}/>
             <NavBar/>
             <h1 className = 'name-header hide' 
                 ref = { element => {nameHeader = element}}>Hey , Im Armando Roman</h1>
