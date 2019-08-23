@@ -52,8 +52,8 @@ const LandingPage = props => {
     return(
         <div className = 'landing-container' style = {{ 
             background : 
-            `url(${background}) center center` , 
-            backgroundSize : 'cover', 
+            `url(${background}) right center` , 
+            backgroundSize : '110%', 
             backgroundColor: '#56597a'}}>
             <NavBar/>
             <h1 className = 'name-header hide' 
