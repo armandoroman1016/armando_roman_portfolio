@@ -2,9 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Handlee|Lateef|Marck+Script|Rock+Salt|Merriweather&display=swap');
 
 .nav-bar{
-    height:20vh;
+    height:10vh;
     width: 100%;
-    background: $primary-color;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,13 +24,13 @@
             margin:0;
             transform: rotate(-2deg);
             transform: translate(-50%, 50%);
-            color:$background-color ;
+            color:#ffffff;
             z-index:1;
-            text-shadow: 1px 1px 2px $primary-color;
+            text-shadow: 2px 1px 1px #000000;
         }
         .first-name:hover{
-                color: darken($background-color, 5%);
-                text-shadow: 1px 1px 5px $secondary-color;
+                color: darken(#ffffff, 5%);
+                text-shadow: 1px 1px 2px #000000;
                 cursor: pointer;
             }
         .last-name{
@@ -40,12 +39,12 @@
             transform: translate(10%,-40%);
             margin-left: 26px;
             z-index: 0;
-            color: $background-color;
-            text-shadow: 1px 1px 2px $primary-color;
+            color:#ffffff ;            
+            text-shadow: 2px 1px 1px #000000;
         }
         .last-name:hover{
-            color: darken($background-color, 5%);
-            text-shadow: 1px 1px 5px $secondary-color;
+            color: darken(#ffffff, 5%);
+            text-shadow: 1px 1px 2px #000000;
             cursor: pointer;
         }
     }
@@ -55,16 +54,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color : $background-color;
+        color : #ffffff ;
         font-size: 2rem;
         list-style: none;
         margin-bottom: 10px;
         font-family: 'Merriweather', 'Times New Roman', Times, serif;
         margin-right:20px;
+        cursor: pointer;
         :hover{
-                color:$background-color;
-                text-shadow: 1px 1px 2px $shadow-color;
-                cursor: pointer;
+                font-size: 2.2rem;
             }  
 }
 }
