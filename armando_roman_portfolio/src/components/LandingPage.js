@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import {TweenMax, Linear, TimelineMax, Bounce, Back, Power4 } from 'gsap';
-
+import background from '../assests/images/background.svg'
+import NavBar from './NavBar'
 
 const LandingPage = props => {
 
@@ -49,12 +50,17 @@ const LandingPage = props => {
     },[])
 
     return(
-        <div className = 'landing-container'>
+        <div className = 'landing-container' style = {{ 
+            background : 
+            `url(${background}) center center` , 
+            backgroundSize : 'cover', 
+            backgroundColor: '#56597a'}}>
+            <NavBar/>
             <h1 className = 'name-header hide' 
                 ref = { element => {nameHeader = element}}>Hey , Im Armando Roman</h1>
             <h2 className = 'hide'
                 ref = { element => {landingPageRole = element }} >A Full Stack Web Developer.</h2>
-            <h2 className = 'hide'
+            <h2 className = 'hide click-message'
                 ref = { element => {landingPageClickMessage = element}}>Click anywhere to get started.</h2>
         </div>
     )
