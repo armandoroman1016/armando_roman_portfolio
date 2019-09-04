@@ -2,67 +2,38 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Handlee|Lateef|Marck+Script|Rock+Salt|Merriweather&display=swap');
 
 .nav-bar{
-    height:10vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .logo-container{
-        height: 100%;
-        width: 15%;
-        font-family: 'Rock Salt';
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.4rem;
+    position: fixed;
+    height: 90vh;
+    width: 15%;
+    left: 2.2%;
+    z-index: 10;
+    top:2rem;
+    background: rgb(34,40,49);
+    background: linear-gradient(133deg, rgba(34,40,49,.5) 19%, rgba(191,0,255,.5) 50%, rgba(180,199,231,.5) 74%);
+    .nav-links{
+        width: 82.4%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        font-size: 3rem;
-        .first-name{
-            margin:0;
-            transform: rotate(-2deg);
-            transform: translate(-50%, 50%);
-            color:#ffffff;
-            z-index:1;
-            text-shadow: 2px 1px 1px #000000;
-        }
-        .first-name:hover{
-                color: darken(#ffffff, 5%);
-                text-shadow: 1px 1px 2px #000000;
-                cursor: pointer;
-            }
-        .last-name{
-            margin:0;
-            transform: rotate(22.5deg);            
-            transform: translate(10%,-40%);
-            margin-left: 26px;
-            z-index: 0;
-            color:#ffffff ;            
-            text-shadow: 2px 1px 1px #000000;
-        }
-        .last-name:hover{
-            color: darken(#ffffff, 5%);
-            text-shadow: 1px 1px 2px #000000;
-            cursor: pointer;
-        }
-    }
-    .nav-links{
-        width: 35%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         color : #ffffff ;
         font-size: 2rem;
         list-style: none;
-        margin-bottom: 10px;
         font-family: 'Merriweather', 'Times New Roman', Times, serif;
-        margin-right:20px;
-        cursor: pointer;
         :hover{
-                font-size: 2.2rem;
-            }  
+            font-size: 2.2rem;
+        }
+        .nav-item{
+            cursor: pointer;
+            text-align: center;
+            margin-right: 40px;
+            width: 100%;
+            
+        }
 }
+}
+.projects-nav{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(55,227,181,1) 0%, rgba(78,228,126,0.54) 90% );
+    
 }
