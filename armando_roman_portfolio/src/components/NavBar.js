@@ -1,19 +1,38 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = props => {
 
+    const path = props
+
+    const paths =  ["/", "/projects", "/about", "/contact"]
+
+    let styleLanding = paths.find(possPath => possPath === path.path)
+
+    console.log(styleLanding)
+
+    styleLanding = styleLanding.slice( 1 );
+
+    console.log(styleLanding)
     return (
 
-        <div className = 'nav-bar'>
-            <div className = 'logo-container'>
-                <h2 className = 'first-name'>A</h2>
-                <h2 className = 'last-name'>R</h2>
-            </div>
+        <div className = {`nav-bar ${styleLanding}-nav`}  >
             <ul className = 'nav-links'>
-                {/*<li className = 'nav-item' onClick = {() => console.log('hello')}>Home</li>*/}
-                <li className = 'nav-item' onClick = {() => console.log('hello')}>About</li>
-                <li className = 'nav-item' onClick = {() => console.log('hello')}>Projects</li>
-                <li className = 'nav-item' onClick = {() => console.log('hello')}>Contact</li>
+                <li className = 'nav-item' >
+                    <NavLink to = '/about' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
+                        color:'#ffffff'
+                    }}>About</NavLink>
+                </li>
+                <li className = 'nav-item' >
+                    <NavLink to ='/projects' className = "nav-link"  style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
+                        color:'#ffffff'
+                    }}>Projects</NavLink>
+                </li>
+                <li className = 'nav-item' >
+                <NavLink to ='/contact' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
+                    color:'#ffffff'
+                }}>Contact</NavLink>
+            </li>
             </ul>
         </div>
     )
