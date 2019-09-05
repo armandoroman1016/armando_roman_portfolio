@@ -1,4 +1,4 @@
-import OpenBreweries from '../assests/images/OpenBreweries.png'
+import OpenBreweries from '../assests/images/laptop_breweries_api.png'
 
 
 

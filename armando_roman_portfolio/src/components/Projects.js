@@ -15,8 +15,10 @@ const Projects = props => {
                 return(
                     <div key = {project.id} className = 'project-container'>
                         <h2 className = 'project-header'>{project.projectName}</h2>
-                        <img src = {project.projectImg} className = 'project-img' alt = 'project-snapshot'/>
-                        <p className = 'project-description'>{project.projectDescription}</p>
+                        <div className = 'img-description'>
+                            <p className = 'project-description'>{project.projectDescription}</p>
+                            <img src = {project.projectImg} className = 'project-img' alt = 'project-snapshot'/>
+                        </div>
                         <div className = 'project-links'>
                             <div className = 'project-link'>
                                 <a href = {project.githubUrl}><img src = {github} alt = 'github icon' className = 'icon'/>View The Code On Github</a>
