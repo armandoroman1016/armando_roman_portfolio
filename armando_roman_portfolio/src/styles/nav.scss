@@ -9,7 +9,7 @@
     z-index: 10;
     top:2rem;
     background: rgb(34,40,49);
-    background: linear-gradient(133deg, rgba(34,40,49,.5) 19%, rgba(191,0,255,.5) 50%, rgba(180,199,231,.5) 74%);
+    background: linear-gradient(133deg, rgba(34,40,49,.5) 19%, rgba(210, 165, 216,.5) 50%, rgba(180,199,231,.5) 74%);
     .nav-links{
         width: 82.4%;
         height: 90%;
@@ -29,10 +29,15 @@
             text-align: center;
             margin-right: 40px;
             width: 100%;
+            position:static;
             
         }
 }
 }
 .projects-nav{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(55,227,181,1) 0%, rgba(78,228,126,0.54) 90% );
+}
+.contact-nav{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(74, 103, 90, .5) 0%, rgba(58, 74, 81,0.54) 90% );
+
 }

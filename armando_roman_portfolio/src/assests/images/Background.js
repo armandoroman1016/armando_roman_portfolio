@@ -17,7 +17,7 @@ const BackgroundLanding = () => {
     const st6 = {fill:"#FFFFFF"}
     const st7 = {display:"none", fill:"#393e46"}
     const st8 = {fill:"#74A2D6" }
-    const st9 = {fill:"#bf00ff " }
+    const st9 = {fill:"#D2A5D8   " }
     const st10 = {fill:"#F7D3BC" }
 
 	return(
