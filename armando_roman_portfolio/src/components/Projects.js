@@ -7,17 +7,21 @@ import computer from '../assests/images/computer.png'
 const Projects = props => {
 
     return(
-        <section className = 'projects-section'>
+        <section className = 'projects-section page'>
         <NavBar path = {props.location.pathname}/>
         <div className = 'projects-container'>
         <h1>The Work</h1>
             {projects.map( project => {
+                let className = ''
+                if(project.hasMobileMock){
+                    className = 'mobile-mock'
+                }
                 return(
                     <div key = {project.id} className = 'project-container'>
                         <h2 className = 'project-header'>{project.projectName}</h2>
                         <div className = 'img-description'>
                             <p className = 'project-description'>{project.projectDescription}</p>
-                            <img src = {project.projectImg} className = 'project-img' alt = 'project-snapshot'/>
+                            <img src = {project.projectImg} className = {`project-img ${className}`}  alt = 'project-snapshot'/>
                         </div>
                         <div className = 'project-links'>
                             <div className = 'project-link'>
