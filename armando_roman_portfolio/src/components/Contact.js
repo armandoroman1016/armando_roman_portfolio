@@ -8,7 +8,7 @@ import linkedin from '../assests/images/linkedin.png'
 const Contact = props => {
 
     return(
-        <div className = 'contact-container page'>
+        <div className = 'contact-container page' style = {{backgroundSize:'cover'}}>
             <NavBar path = {props.location.pathname}/>
             <div className = 'circle-one'/>
             <div className = 'circle-two'/>
