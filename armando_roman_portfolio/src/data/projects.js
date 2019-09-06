@@ -13,7 +13,7 @@ export const projects = [
         githubUrl: 'https://github.com/armandoroman1016/Brewery-Api-Project'
     },
     {
-        id: 1,
+        id: 2,
         hasMobileMock: true,
         projectName: "Party Planner",
         projectImg: PartyPlanner,
