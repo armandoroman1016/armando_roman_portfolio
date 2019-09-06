@@ -16,10 +16,9 @@ const LandingPage = props => {
             .set(landingPageRole, { autoAlpha: 0, onComplete : showText})
             ;
             
-        function showText() {
+        function showText(){
             nameHeader.classList.remove('hide')
             landingPageRole.classList.remove('hide')
-            // landingPageClickMessage.classList.remove('hide')
         }
 
         return clearTl;
@@ -31,7 +30,6 @@ const LandingPage = props => {
         textTl
             .to(nameHeader, 1.5, {autoAlpha: 1, y : 0, x: 0, ease: Back.easeInOut})
             .fromTo(landingPageRole, 1.8, {autoAlpha: 0, scale: 0.1, x: 550, y: -100,},{ autoAlpha: 1, y: 0, x: 0, scale: 1 , ease: Power4.easeInOut}, '-=0.4')
-            // .fromTo(landingPageClickMessage, 1.2, { autoAlpha: .1, scale: .1, x: -1800 , y: -100}, { autoAlpha : 1, scale: 1, x: 0, y: 0, ease: Power4.easeOut})
             ;
 
         return textTl

@@ -2,18 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = props => {
-
     const path = props
 
     const paths =  ["/", "/projects", "/about", "/contact"]
 
     let styleLanding = paths.find(possPath => possPath === path.path)
 
-    console.log(styleLanding)
-
     styleLanding = styleLanding.slice( 1 );
-
-    console.log(styleLanding)
     return (
 
         <div className = {`nav-bar ${styleLanding}-nav`}  >

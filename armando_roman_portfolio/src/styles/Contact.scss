@@ -80,3 +80,34 @@
     }
 }
 }
+.circle-one{
+    height:250px;
+    width: 250px;
+    background: rgb(255,240,206);
+    background: linear-gradient(220deg, rgba(255,240,206,1) 0%, rgba(213,85,52,1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top:4rem;
+    left: 3rem;
+    position: fixed;
+}
+.circle-two{
+    height:175px;
+    width: 175px;
+    background: rgb(255,240,206);
+    background: linear-gradient(331deg, rgba(255,240,206,1) 0%, rgba(213,85,52,1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top:22rem;
+    left: 14rem;
+}
+.circle-three{
+    height:222px;
+    width: 222px;
+    background: rgb(255,240,206);
+background: linear-gradient(142deg, rgba(255,240,206,1) 0%, rgba(213,85,52,1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    bottom:1rem;
+    left: 1rem;
+}

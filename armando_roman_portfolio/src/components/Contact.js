@@ -8,8 +8,12 @@ import linkedin from '../assests/images/linkedin.png'
 const Contact = props => {
 
     return(
-        <div className = 'contact-container'>
+        <div className = 'contact-container page'>
             <NavBar path = {props.location.pathname}/>
+            <div className = 'circle-one'/>
+            <div className = 'circle-two'/>
+            <div className = 'circle-three'/>
+            <div className = 'circle-four'/>
             <div className = 'form-container'>
                 <h2>Contact Armando</h2>
                 <form id = 'contact_form'>
