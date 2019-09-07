@@ -18,10 +18,21 @@
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 25%;
+        @include mobile{
+            width: 100%;
+            justify-content: space-around;
+            margin-left: 0;
+            padding-bottom: 20%;
+        }
         h1{
         color: #383838;
         text-shadow: 1px 1px rgba(9, 115, 146,.7);
         text-decoration-line: underline;
+        @include mobile{
+            margin-left: 5%;
+            text-decoration-line: none;
+            margin-bottom: 4%;
+        }
         }
         .project-container{
             width: 92%;
@@ -36,6 +47,13 @@
             box-shadow: 0 0 25px rgba(56,56,56, 0.5);
             color: #fff0ce;
             border-radius: 10px;
+            @include mobile{
+                padding: 0;
+                margin: 0;
+                width: 90%;
+                margin: 6% auto;
+                justify-content: space-between;
+            }
             .project-header{
                 font-size:2.6rem;
                 width: 90%;
@@ -48,15 +66,26 @@
                 align-items: center;
                 width: 100%;
                 height:100%;
+                @include mobile{
+                    flex-direction: column;
+                }
             img{
                 width: 35%;
                 height:auto;
                 margin-top: -10%;
                 z-index: 0;
-                filter: drop-shadow(0px 5px 3px black)
+                filter: drop-shadow(0px 5px 3px black);
+                @include mobile{
+                    width: 80%;
+                    margin-top: -20%;
+                }
             }
             .mobile-mock{
                 transform: translateY(8%);
+                @include mobile{
+                    width: 80%;
+                    margin-top: -10%;
+                }
             }
             .project-description{
                 font-size:1.6rem;
@@ -64,6 +93,9 @@
                 width: 60%;
                 margin-left: 20px;
                 color: #fff0ce;
+                @include mobile{
+                    width: 95%;
+                }
             }
         }
             .project-links{
@@ -72,6 +104,12 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-top:6%;
+                @include mobile{
+                    flex-direction: column;
+                    height:10%;
+                    margin-top: 8%;
+                    align-items: flex-start;
+                }
                 .project-link{
                     margin: 0 0 20px 20px;
                     a{
@@ -81,6 +119,9 @@
                         color:#fff0ce;
                         display: flex;
                         align-items: center;
+                        @include mobile{
+                           width: 100%;
+                        }
                     }
                     .icon{
                         width:48px;
