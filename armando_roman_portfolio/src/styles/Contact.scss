@@ -2,12 +2,15 @@
     position: relative;
     background-color: #fff0ce;
     height: 97.6vh;
+    overflow: hidden;
+    @include mobile{
+        width:100%;
+        height:100%;
+    }
 .form-container{
     margin:0;
     padding:0;
-    // margin: auto 0;
     margin-left: 25%;
-    // margin-top: 5%;
     transform: translateY(14%);
     background-color: rgba(131,180,179, 1);
     width: 68%;
@@ -16,12 +19,28 @@
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(131,180,179, .5);
     border-radius: 10px;
+    @include mobile{
+        padding: 0;
+        margin: 0;
+        transform: translateY(0%);
+        width: 90%;
+        height: 100%;
+        margin: 5% auto;
+        margin-top: 10%;
+        
+    }
     h2{
         margin: 0 0 30px;
         padding: 0;
         color: #383838;
         text-align: center;
         font-size:3rem;
+        @include mobile{
+            padding: 0;
+            margin: 0;
+            font-size: 2rem;
+            padding: 8% 0;
+        }
     }
     .input-container{
         position: relative;
@@ -37,6 +56,12 @@
             border-bottom: 3px solid #383838;
             outline: none;
             background: transparent;
+            @include mobile{
+                width:80%;
+                margin: 0 auto;
+                margin-bottom: 7%;
+
+            }
         }
         label{
             position: absolute;
@@ -44,11 +69,14 @@
             left:0;
             padding: 10px 0;
             font-size:1.6rem;
-            // font-weight: 800;
             letter-spacing: 1px;
             color: #383838;
             pointer-events: none;
             transition: .5s;
+            @include mobile{
+                margin: 0 auto;
+                left: 10%
+            }
         }
         input:focus ~ label,
         input:valid ~ label{
@@ -56,6 +84,9 @@
             left: 0;
             color: #fff0ce;
             font-size:1.4rem;
+            @include mobile{
+                left: 10%
+            }
         }
     }
     button{
@@ -68,14 +99,29 @@
         font-size:1.4rem;
         cursor: pointer;
         border-radius: 5px;
+        @include mobile{
+            position: absolute;
+            right:10%;
+        }
     }
     .contact-icons{
         position: absolute;
         bottom: 4%;
         right: 4%;
+        @include mobile{
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         img{
             margin-left: 45px;
             cursor: pointer;
+            @include mobile{
+                width: 15%;
+                margin: 0 auto;
+            }
         }
     }
 }
