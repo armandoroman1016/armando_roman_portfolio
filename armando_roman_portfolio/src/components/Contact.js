@@ -1,4 +1,5 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
+import axios from 'axios'
 import NavBar from './NavBar'
 import github from '../assests/images/github.png'
 import gmail from '../assests/images/gmail.png'
@@ -7,6 +8,33 @@ import {Elastic, TimelineMax, Power4 } from 'gsap';
 
 const Contact = props => {
 
+    const [ values, setValues ] = useState({
+        name: '',
+        phone: '',
+        email:'', 
+        message:''
+    })
+
+
+    const handleChange = (e) =>{
+        setValues({...values, [e.target.name]: e.target.value})
+    }
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        axios
+            .post('https://armando-roman-portfolio.herokuapp.com/api/contact', values)
+            .then( res => console.log(res))
+            .catch( err => console.log(err))
+        setValues({
+            name: '',
+            phone: '',
+            email:'', 
+            message:''
+        })
+    }
+
+    //?animations
     let bubbleOne = useRef(null)
     let bubbleTwo = useRef(null)
     let bubbleThree = useRef(null)
@@ -53,7 +81,7 @@ const Contact = props => {
         }
         const bubblesTl = new TimelineMax()
             bubblesTl
-                .fromTo(bubbleThree, 2, {scale: 0.1, transformOrigin: 'bottom center', autoAlpha: 0}, {scale:1, transformOrigin: 'bottom center', autoAlpha:1, ease: Elastic.easeOut})
+                .fromTo(bubbleThree, 2, {scale: 0.1, transformOrigin: 'bottom center', autoAlpha: 0}, {scale:1, transformOrigin: 'bottom center', autoAlpha:1, ease: Elastic.easeOut},)
                 .fromTo(bubbleTwo, 2, {scale: 0.1, transformOrigin: 'bottom center', autoAlpha: 0}, {scale:1, transformOrigin: 'bottom center', autoAlpha:1, ease: Elastic.easeOut},'-=1.25')
                 .fromTo(bubbleOne, 2, {scale: 0.1, transformOrigin: 'bottom center', autoAlpha: 0}, {scale:1, transformOrigin: 'bottom center', autoAlpha:1, ease: Elastic.easeOut},'-=1.25')
                 .to(bubbleOne, 250, {bezier: bubbleOnePath, ease: Power4.ease}, '-=3.6')
@@ -64,11 +92,9 @@ const Contact = props => {
 
     const go = () => {
         const masterTl = new TimelineMax()
-
         masterTl
             .add(clearStage(), 'clear-scene')
             .add(bubbles(), 'moving-bubbles')
-
         return masterTl
     }
 
@@ -78,6 +104,7 @@ const Contact = props => {
         }
     },[bubbleThree])
 
+    //? end animations ^
 
     return(
         <div className = 'contact-container page' style = {{backgroundSize:'cover'}}>
@@ -87,21 +114,21 @@ const Contact = props => {
             <div className = 'circle-three hide' ref = {element => {bubbleThree = element}}/>
             <div className = 'form-container'>
                 <h2>Contact Armando</h2>
-                <form id = 'contact_form'>
+                <form id = 'contact_form' onSubmit = {handleSubmit}>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'name' required/>
+                        <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} required/>
                             <label>Name</label>
                     </div>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'phone' required/>
+                        <input type = 'text' name = 'phone' value = {values.phone} onChange={handleChange} required/>
                             <label>Phone Number</label>
                     </div>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'email' required/>
+                        <input type = 'text' name = 'email' value = {values.email} onChange={handleChange} required/>
                             <label>Email</label>
                     </div>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'message' required/>
+                        <input type = 'text' name = 'message' value = {values.message} onChange={handleChange} required/>
                             <label>Message</label>
                     </div>
                     <button type = 'submit'>Submit</button>
