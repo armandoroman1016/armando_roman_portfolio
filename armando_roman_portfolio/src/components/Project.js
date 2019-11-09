@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import github from '../assests/images/github.png'
 import computer from '../assests/images/computer.png'
+import github from '../assests/images/github.png'
 import VisibilitySensor from "react-visibility-sensor";
 import { Spring, config } from 'react-spring/renderprops'
 

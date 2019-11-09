@@ -1,5 +1,7 @@
 .projects-section{
     overflow: hidden;
+    background: $background-color;
+    min-height: 100vh;
     h1{
         font-size:3.6rem;
         text-align: left;
@@ -11,6 +13,7 @@
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 25%;
+        margin-top: 5%;
         @include mobile{
             width: 100%;
             justify-content: space-around;
@@ -18,8 +21,7 @@
             padding-bottom: 20%;
         }
         h1{
-        color: #383838;
-        text-shadow: 1px 1px rgba(9, 115, 146,.7);
+        color: $font-color;
         text-decoration-line: underline;
         @include mobile{
             margin-left: 5%;
@@ -29,16 +31,13 @@
         }
         .project-container{
             width: 92%;
-            background-color: #383838;
-            padding: 0 50px 0 50px;
+            background-color: $light-grey;
+            padding: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            margin-bottom: 50px;
-            margin-top: 0;
-            padding-bottom: 30px;
-            box-shadow: 0 0 25px rgba(56,56,56, 0.5);
-            color: #fff0ce;
+            margin: 50px 0;
+            color: $font-color;
             border-radius: 10px;
             @include mobile{
                 padding: 0;
@@ -85,7 +84,7 @@
                 line-height: 1.5;
                 width: 60%;
                 margin-left: 20px;
-                color: #fff0ce;
+                color: $font-color;
                 @include mobile{
                     width: 95%;
                 }
@@ -109,7 +108,7 @@
                         font-size:1.4rem;
                         text-decoration: none;
                         width: 90%;
-                        color:#fff0ce;
+                        color: $font-color;
                         display: flex;
                         align-items: center;
                         @include mobile{

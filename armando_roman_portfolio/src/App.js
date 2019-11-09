@@ -2,7 +2,6 @@ import React from 'react';
 import LandingPage from './components/LandingPage'
 import { Route, Switch } from 'react-router-dom'
 import Projects from './components/Projects'
-import NavBar from './components/NavBar'
 import Contact from './components/Contact'
 import About from './components/About'
 import { CSSTransition,  TransitionGroup } from 'react-transition-group'
