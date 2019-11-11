@@ -26,7 +26,7 @@
         font-size: 1.6rem;
         list-style: none;
         :hover{
-            font-size: 1.7rem;
+            text-shadow: 0 0 5px $orange;
         }
         @include mobile{
             width:100%;

@@ -9,9 +9,6 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    @include mobile {
-        height:98vh;
-    }
     .web{
         color:$landing-font-background;
         position: absolute;
@@ -30,6 +27,7 @@
             color: $green;
             font-size: 1.2rem;
             font-family: 'Nothing You Could Do','Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
+            letter-spacing: .1rem;
         }
         .web-text{
             position: relative;
@@ -41,6 +39,7 @@
                 letter-spacing: 1rem;
                 transform: rotate(-90deg);
                 color:$font-color;
+                font-weight: 900;
                 .period{
                     color:$orange;
                 }
@@ -67,6 +66,7 @@
             color: $green;
             text-align: right;
             font-family: 'Nothing You Could Do', 'Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
+            letter-spacing: .1rem;
         }
     }
     .name-container{
@@ -80,7 +80,7 @@
         padding-left:62%;
         .name{
         font-size:7.8rem;
-        font-weight: 800;
+        font-weight: 900;
         line-height:1.5;
         }
         span{
