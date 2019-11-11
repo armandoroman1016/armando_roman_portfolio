@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Liu+Jian+Mao+Cao|Nothing+You+Could+Do|Montserrat&display=swap');
 .landing-container{
     height: 100vh;
     width: 100vw;
@@ -20,6 +20,7 @@
         display:flex;
         flex-direction: column;
         justify-content: space-between;
+        font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
         p{
             font-size: 14rem;
             font-weight:700;
@@ -28,14 +29,16 @@
         .opening-tags{
             color: $green;
             font-size: 1.2rem;
+            font-family: 'Nothing You Could Do','Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
         }
         .web-text{
             position: relative;
             .hello{
                 font-size:5.5rem;
-                // margin:  0 0;
+                font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
                 position: absolute;
-                right:-43%;
+                right:-40%;;
+                letter-spacing: 1rem;
                 transform: rotate(-90deg);
                 color:$font-color;
                 .period{
@@ -51,26 +54,32 @@
         left:23%;
         display:flex;
         flex-direction: column;
+        font-weight:700;
+        font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
         p{
         justify-content: space-between;
         font-size: 14rem;
         letter-spacing: .5rem;
-        font-weight:700;
+        
         }
         .closing-tags{
             font-size: 1.2rem;
             color: $green;
             text-align: right;
+            font-family: 'Nothing You Could Do', 'Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
         }
     }
     .name{
         position: absolute;
         font-size:8rem;
-        letter-spacing: .07rem;
+        font-weight: 800;
+        line-height:1.5;
         color:$font-color;
         text-align: left;
         left: 60%;
-        bottom: 20%;
+        width:50%;
+        top: 10%;
+        font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
         span{
             color:$green
         }
