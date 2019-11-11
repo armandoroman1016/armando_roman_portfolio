@@ -17,7 +17,7 @@
         color:$landing-font-background;
         position: absolute;
         bottom: 40%;
-        left:12%;
+        left:13.5%;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -52,7 +52,7 @@
         color:$landing-font-background;
         position: absolute;
         bottom: 8%;
-        left:23%;
+        left:24.5%;
         display:flex;
         flex-direction: column;
         font-weight:700;
@@ -78,9 +78,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        position: relative;
+        padding-left:62%;
         .name{
-        font-size:8rem;
+        font-size:7.8rem;
         font-weight: 800;
         line-height:1.5;
         }

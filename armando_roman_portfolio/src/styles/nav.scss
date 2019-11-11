@@ -1,13 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Handlee|Lateef|Marck+Script|Rock+Salt|Merriweather&display=swap');
-
 .nav-bar{
     position: fixed;
-    height: 90vh;
-    width: 15%;
-    left: 2.2%;
+    height: 100vh;
+    width: 10%;
+    left: 0;
+    top:0;
     z-index: 10;
-    top:2rem;
+    background: #131313;
+    font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
     @include mobile{
         height:10vh;
         width: 100vw;
@@ -17,18 +17,16 @@
         bottom: 0;
     }
     .nav-links{
-        width: 82.4%;
-        height: 90%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         color : $font-color ;
-        font-size: 2rem;
+        font-size: 1.6rem;
         list-style: none;
-        font-family: 'Merriweather', 'Times New Roman', Times, serif;
         :hover{
-            font-size: 2.2rem;
+            font-size: 1.7rem;
         }
         @include mobile{
             width:100%;
@@ -41,17 +39,10 @@
         .nav-item{
             cursor: pointer;
             text-align: center;
-            margin-right: 40px;
             width: 100%;
             @include mobile{
                 text-align: left;
             }
         }
 }
-}
-.projects-nav{
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(56,56,56, .5) 0%, rgba(56,56,56,0.5) 90% );
-}
-.contact-nav{
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(56,56,56, .56) 0%, rgba(56,56,56,0.54) 90% );
 }
