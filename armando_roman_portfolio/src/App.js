@@ -2,7 +2,6 @@ import React from 'react';
 import LandingPage from './components/LandingPage'
 import { Route, Switch } from 'react-router-dom'
 import Projects from './components/Projects'
-import NavBar from './components/NavBar'
 import Contact from './components/Contact'
 import About from './components/About'
 import { CSSTransition,  TransitionGroup } from 'react-transition-group'
@@ -22,7 +21,7 @@ function App() {
             <Switch location = {location}>
               <Route path = '/projects' component = {Projects}/>
               <Route path = '/contact' component = {Contact}/>
-              <Route path = '/about' component = {About}/>
+              {/* <Route path = '/about' component = {About}/> */}
             </Switch>
           </CSSTransition>
         </TransitionGroup>

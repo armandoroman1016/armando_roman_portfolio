@@ -14,9 +14,9 @@ const NavBar = props => {
         <div className = {`nav-bar ${styleLanding}-nav`}  >
             <ul className = 'nav-links'>
                 <li className = 'nav-item' >
-                    <NavLink to = '/about' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
+                    <NavLink to = '/' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
                         color:'#ffffff'
-                    }}>About</NavLink>
+                    }}>Home</NavLink>
                 </li>
                 <li className = 'nav-item' >
                     <NavLink to ='/projects' className = "nav-link"  style = {{textDecoration: 'none', color: "white"}}activeStyle = {{

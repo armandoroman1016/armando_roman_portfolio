@@ -12,6 +12,7 @@ const Contact = props => {
         name: '',
         phone: '',
         email:'', 
+        company: '',
         message:''
     })
 
@@ -22,16 +23,17 @@ const Contact = props => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios
-            .post('https://armando-roman-portfolio.herokuapp.com/api/contact', values)
-            .then( res => console.log(res))
-            .catch( err => console.log(err))
-        setValues({
-            name: '',
-            phone: '',
-            email:'', 
-            message:''
-        })
+        console.log(values)
+        // axios
+        //     .post('https://armando-roman-portfolio.herokuapp.com/api/contact', values)
+        //     .then( res => console.log(res))
+        //     .catch( err => console.log(err))
+        // setValues({
+        //     name: '',
+        //     phone: '',
+        //     email:'', 
+        //     message:''
+        // })
     }
 
     //?animations
@@ -116,27 +118,31 @@ const Contact = props => {
                 <h2>Contact Armando</h2>
                 <form id = 'contact_form' onSubmit = {handleSubmit}>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} required/>
+                        <div className = 'name'>
                             <label>Name</label>
-                    </div>
-                    <div className = 'input-container'>
-                        <input type = 'text' name = 'phone' value = {values.phone} onChange={handleChange} required/>
+                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} required/>
+                        </div>
+                        <div className = 'phone'>
                             <label>Phone Number</label>
+                            <input type = 'text' name = 'phone' value = {values.phone} onChange={handleChange} required/>
+                        </div>
                     </div>
                     <div className = 'input-container'>
-                        <input type = 'text' name = 'email' value = {values.email} onChange={handleChange} required/>
+                        <div className = 'email'>
                             <label>Email</label>
+                            <input type = 'text' name = 'email' value = {values.email} onChange={handleChange} required/>
+                    
+                        </div>
+                        <div className = 'company'>
+                            <label>Company Name</label>
+                            <input type = 'text' name = 'company' value = {values.name} onChange={handleChange} required/>
+                        </div>
                     </div>
-                    <div className = 'input-container'>
-                        <input type = 'text' name = 'message' value = {values.message} onChange={handleChange} required/>
-                            <label>Message</label>
+                    <div className = 'input-container message'>
+                        <label>Message</label>
+                        <textarea rows="7" cols="50" type = 'text' name = 'message' value = {values.message} onChange={handleChange}/>
                     </div>
                     <button type = 'submit'>Submit</button>
-                    <div className = 'contact-icons'>
-                        <img src = {github} alt = 'github-icon' />
-                        <img src = {gmail} alt = 'gmail-icon' />
-                        <img src = {linkedin} alt = 'linkedin-icon' />
-                    </div>
                 </form>
             </div>
         </div>

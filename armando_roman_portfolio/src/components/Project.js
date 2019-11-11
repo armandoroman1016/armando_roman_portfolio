@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import github from '../assests/images/github.png'
 import computer from '../assests/images/computer.png'
+import github from '../assests/images/github.png'
 import VisibilitySensor from "react-visibility-sensor";
 import { Spring, config } from 'react-spring/renderprops'
 
@@ -40,10 +40,10 @@ const Project = props => {
                                 </div>
                                 <div className='project-links'>
                                     <div className='project-link'>
-                                        <a href={project.githubUrl}><img src={github} alt='github icon' className='icon' />View The Code On Github</a>
+                                        <a href={project.githubUrl}><img src={github} alt='github icon' className='icon' />View The Code</a>
                                     </div>
                                     <div className='project-link'>
-                                        <a href={project.projectUrl}><img src={computer} alt='computer icon' className='icon' />View This Project</a>
+                                        <a href={project.projectUrl}><img src={computer} alt='computer icon' className='icon' />Demo Project</a>
                                     </div>
                                 </div>
                             </div>
