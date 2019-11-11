@@ -62,8 +62,10 @@ const LandingPage = props => {
                     <p className = 'closing-tags'>{`</html>`}</p>
                 </div>            
             </div>
+            <div className = 'name-container'>
                 <p className = 'name'>I am<br/>Armando Roman<span>.</span></p>
-                {/* <h2 className = 'role-landing_page'>A Full Stack Web Developer.</h2> */}
+                <p className = 'role'>A Full Stack Web Developer</p>
+            </div>
         </div>
     )
 }

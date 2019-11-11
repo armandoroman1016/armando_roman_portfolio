@@ -8,10 +8,11 @@
     font-family: 'Merriweather', 'Times New Roman', Times, serif;
     background: $background-color;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     @include mobile {
         height:98vh;
     }
-
     .web{
         color:$landing-font-background;
         position: absolute;
@@ -37,7 +38,7 @@
                 font-size:5.5rem;
                 font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
                 position: absolute;
-                right:-40%;;
+                left:84%;
                 letter-spacing: 1rem;
                 transform: rotate(-90deg);
                 color:$font-color;
@@ -69,19 +70,28 @@
             font-family: 'Nothing You Could Do', 'Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
         }
     }
-    .name{
-        position: absolute;
+    .name-container{
+        color:$font-color;
+        max-width: 40%;
+        height:100%;
+        font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        .name{
         font-size:8rem;
         font-weight: 800;
         line-height:1.5;
-        color:$font-color;
-        text-align: left;
-        left: 60%;
-        width:50%;
-        top: 10%;
-        font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+        }
         span{
             color:$green
+        }
+        .role{
+            font-size:1.2rem;
+            text-align: right;
+            margin: 0 12% 5% 0;
+            line-height: .5;
         }
     }
     h2{
