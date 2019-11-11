@@ -31,7 +31,7 @@
         }
         .project-container{
             width: 92%;
-            background-color: $light-grey;
+            // background-color: $light-grey;
             padding: 4rem;
             display: flex;
             flex-direction: column;
@@ -107,7 +107,7 @@
                     a{
                         font-size:1.4rem;
                         text-decoration: none;
-                        width: 90%;
+                        width: 100%;
                         color: $font-color;
                         display: flex;
                         align-items: center;

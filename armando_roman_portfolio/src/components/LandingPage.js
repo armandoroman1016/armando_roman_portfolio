@@ -5,57 +5,65 @@ import NavBar from './NavBar'
 const LandingPage = props => {
 
 
-    let nameHeader = useRef(null)
-    let landingPageRole = useRef(null)
+    // let nameHeader = useRef(null)
+    // let landingPageRole = useRef(null)
 
-    const clearStage = () => {
-        const clearTl = new TimelineMax();
-        clearTl
-            .set(nameHeader, { autoAlpha: 0, y : -800})
-            .set(landingPageRole, { autoAlpha: 0, onComplete : showText})
-            ;
+    // const clearStage = () => {
+    //     const clearTl = new TimelineMax();
+    //     clearTl
+    //         .set(nameHeader, { autoAlpha: 0, y : -800})
+    //         .set(landingPageRole, { autoAlpha: 0, onComplete : showText})
+    //         ;
             
-        function showText(){
-            nameHeader.classList.remove('hide')
-            landingPageRole.classList.remove('hide')
-        }
+    //     function showText(){
+    //         nameHeader.classList.remove('hide')
+    //         landingPageRole.classList.remove('hide')
+    //     }
 
-        return clearTl;
-    }
+    //     return clearTl;
+    // }
 
-    const enterText = () =>{
-        const textTl = new TimelineMax()
+    // const enterText = () =>{
+    //     const textTl = new TimelineMax()
 
-        textTl
-            .to(nameHeader, 1.5, {autoAlpha: 1, y : 0, x: 0, ease: Back.easeInOut})
-            .fromTo(landingPageRole, 1.8, {autoAlpha: 0, scale: 0.1, x: 550, y: -100,},{ autoAlpha: 1, y: 0, x: 0, scale: 1 , ease: Power4.easeInOut}, '-=0.4')
-            ;
+    //     textTl
+    //         .to(nameHeader, 1.5, {autoAlpha: 1, y : 0, x: 0, ease: Back.easeInOut})
+    //         .fromTo(landingPageRole, 1.8, {autoAlpha: 0, scale: 0.1, x: 550, y: -100,},{ autoAlpha: 1, y: 0, x: 0, scale: 1 , ease: Power4.easeInOut}, '-=0.4')
+    //         ;
 
-        return textTl
-    }
+    //     return textTl
+    // }
     
-    const go = () => {
-        const masterTl = new TimelineMax();
-            masterTl
-                .add(clearStage(), 'scene-clear-stage')
-                .add(enterText(), 'enter-text-tl')
-    }
+    // const go = () => {
+    //     const masterTl = new TimelineMax();
+    //         masterTl
+    //             .add(clearStage(), 'scene-clear-stage')
+    //             .add(enterText(), 'enter-text-tl')
+    // }
 
-    useEffect(() => {
-        go()
-    },[])
+    // useEffect(() => {
+    //     go()
+    // },[])
 
     return(
-        <div className = 'landing-container' >
+        <div className = 'landing-container'>
             <NavBar path = {props.location.pathname}/>
-            <>
-                <h1 className = 'name-header' 
-                    ref = { element => {nameHeader = element}}>Hey, Im Armando Roman</h1>
-            </>
-            <>
-                <h2 className = 'hide role-landing_page'
-                ref = { element => {landingPageRole = element }} >A Full Stack Web Developer.</h2>
-            </>
+            <div>
+                <div className = 'web'>
+                <p className = 'opening-tags'>{`<html>`}</p>
+                    <p className = 'web-text'>
+                        WEB
+                        <span className = 'hello'>Hello<span className = 'period'>.</span></span>
+                    </p>
+                    
+                </div>
+                <div className = 'dev'>
+                    <p>DEV</p>
+                    <p className = 'closing-tags'>{`</html>`}</p>
+                </div>            
+            </div>
+                <p className = 'name'>I am<br/>Armando Roman<span>.</span></p>
+                {/* <h2 className = 'role-landing_page'>A Full Stack Web Developer.</h2> */}
         </div>
     )
 }

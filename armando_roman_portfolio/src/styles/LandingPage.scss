@@ -1,38 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 .landing-container{
     height: 100vh;
+    width: 100vw;
     max-height: 100vh;
     max-width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    text-shadow: 1px 1px 3px #000000;
     position: relative;
     font-family: 'Merriweather', 'Times New Roman', Times, serif;
-    margin-bottom: 0;
-    overflow: hidden;
     background: $background-color;
+    overflow: hidden;
     @include mobile {
         height:98vh;
     }
-    .name-header{
-            font-size:4rem;
-            color:$font-color;
-            text-shadow: 1.2px 2px 1px #000000;
-            letter-spacing: 1.3px;
-            width: 100%;
-            line-height: 2;
-            padding: 50px;
-            text-align: left;
-            margin-left: 15%;
-            @include mobile{
-                font-size: 2rem;
-                padding: 20px;
-                margin-left: 6%;
+
+    .web{
+        color:$landing-font-background;
+        position: absolute;
+        bottom: 40%;
+        left:12%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+            font-size: 14rem;
+            font-weight:700;
+            letter-spacing: .5rem;
+        }
+        .opening-tags{
+            color: $green;
+            font-size: 1.2rem;
+        }
+        .web-text{
+            position: relative;
+            .hello{
+                font-size:5.5rem;
+                // margin:  0 0;
                 position: absolute;
-                top:10%;
-            }
+                right:-43%;
+                transform: rotate(-90deg);
+                color:$font-color;
+                .period{
+                    color:$orange;
+                }
+        }
+        }
+    }
+    .dev{
+        color:$landing-font-background;
+        position: absolute;
+        bottom: 8%;
+        left:23%;
+        display:flex;
+        flex-direction: column;
+        p{
+        justify-content: space-between;
+        font-size: 14rem;
+        letter-spacing: .5rem;
+        font-weight:700;
+        }
+        .closing-tags{
+            font-size: 1.2rem;
+            color: $green;
+            text-align: right;
+        }
+    }
+    .name{
+        position: absolute;
+        font-size:8rem;
+        letter-spacing: .07rem;
+        color:$font-color;
+        text-align: left;
+        left: 60%;
+        bottom: 20%;
+        span{
+            color:$green
+        }
     }
     h2{
         font-size: 4rem;

@@ -40,10 +40,10 @@ const Project = props => {
                                 </div>
                                 <div className='project-links'>
                                     <div className='project-link'>
-                                        <a href={project.githubUrl}><img src={github} alt='github icon' className='icon' />View The Code On Github</a>
+                                        <a href={project.githubUrl}><img src={github} alt='github icon' className='icon' />View The Code</a>
                                     </div>
                                     <div className='project-link'>
-                                        <a href={project.projectUrl}><img src={computer} alt='computer icon' className='icon' />View This Project</a>
+                                        <a href={project.projectUrl}><img src={computer} alt='computer icon' className='icon' />Demo Project</a>
                                     </div>
                                 </div>
                             </div>
