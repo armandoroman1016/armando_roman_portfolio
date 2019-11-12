@@ -7,7 +7,6 @@ const Projects = props => {
 
     return(
         <section className = 'projects-section page'>
-        <NavBar path = {props.location.pathname}/>
         <div className = 'projects-container'>
         <h1>The Work</h1>
             {projects.map( project => {

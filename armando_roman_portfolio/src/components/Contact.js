@@ -110,7 +110,6 @@ const Contact = props => {
 
     return(
         <div className = 'contact-container page' style = {{backgroundSize:'cover'}}>
-            <NavBar path = {props.location.pathname}/>
             <div className = 'circle-one hide' ref = {element => {bubbleOne = element}}/>
             <div className = 'circle-two hide' ref = {element => {bubbleTwo = element}}/>
             <div className = 'circle-three hide' ref = {element => {bubbleThree = element}}/>
@@ -120,27 +119,27 @@ const Contact = props => {
                     <div className = 'input-container'>
                         <div className = 'name'>
                             <label>Name</label>
-                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} required/>
+                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} placeholder = 'Name' required/>
                         </div>
                         <div className = 'phone'>
                             <label>Phone Number</label>
-                            <input type = 'text' name = 'phone' value = {values.phone} onChange={handleChange} required/>
+                            <input type = 'text' name = 'phone' value = {values.phone} placeholder = 'Phone' onChange={handleChange} required/>
                         </div>
                     </div>
                     <div className = 'input-container'>
                         <div className = 'email'>
                             <label>Email</label>
-                            <input type = 'text' name = 'email' value = {values.email} onChange={handleChange} required/>
+                            <input type = 'text' name = 'email' value = {values.email} placeholder = 'Email' onChange={handleChange} required/>
                     
                         </div>
                         <div className = 'company'>
                             <label>Company Name</label>
-                            <input type = 'text' name = 'company' value = {values.name} onChange={handleChange} required/>
+                            <input type = 'text' name = 'company' value = {values.company} placeholder = 'Company Name' onChange={handleChange} required/>
                         </div>
                     </div>
                     <div className = 'input-container message'>
                         <label>Message</label>
-                        <textarea rows="7" cols="50" type = 'text' name = 'message' value = {values.message} onChange={handleChange}/>
+                        <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
                     <button type = 'submit'>Submit</button>
                 </form>

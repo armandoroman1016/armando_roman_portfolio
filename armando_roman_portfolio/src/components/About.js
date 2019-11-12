@@ -3,9 +3,20 @@ import NavBar from './NavBar'
 
 const About = props =>{
     return(
-        <div className = 'page'>
-            <NavBar path = {props.location.pathname}/>
-        </div>
+        <section className = 'about-container page'>
+            <div clasName = 'about-text'>
+                <h2>Who Is Armando Roman<span> ?</span></h2>
+                <p>
+                    Armando Roman is a Full Stack Web Developer that truly enjoys building products that will benefit many.
+                </p>
+            </div>
+            <span className = 'background-text javascript'>JAVASCRIPT</span>
+            <span className = 'background-text css'>CSS</span>
+            <span className = 'background-text react'>REACTJS</span>
+            <span className = 'background-text node'>NODE</span>
+            <span className = 'background-text python'>PYTHON</span>
+            <span className = 'background-text html'>HTML</span>
+        </section>
     )
 }
 

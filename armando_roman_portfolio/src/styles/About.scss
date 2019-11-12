@@ -1,0 +1,55 @@
+.about-container{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+    background: $background-color;
+    .about-text{
+        position: absolute;
+        top:10%;
+        left:15%;
+        color: $font-color;
+        width:40%;
+        background: red;
+        h2{
+            font-size: 3.2rem;
+            span{ 
+                color: $green;
+            }
+        }
+        p{
+            color: $font-color;
+        }
+    }
+    .background-text{
+        color:$landing-font-background;
+        position: absolute;
+        font-weight:800;
+        font-size:5rem;
+    }
+    .javascript{
+        top: 8%;
+        right: 3%;
+    }
+    .css{
+        top: 25%;
+        right: 33%;
+    }
+    .react{
+        top: 37%;
+        right: 3%;
+    }
+    .node{
+        top: 53%;
+        right: 26%;
+    }
+    .html{
+        top:66%;
+        right:3%;
+    }
+    .python{
+        top:83%;
+        right:12%;
+    }
+}
