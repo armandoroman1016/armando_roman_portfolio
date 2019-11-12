@@ -57,9 +57,10 @@
             }
             input{
                 width: 100%;
+                height: 60%;
                 margin: 1rem 0;
-                padding: .8rem 0;
-                font-size:1.6rem;
+                font-size:1.3rem;
+                padding: 0 .5rem;
                 color: $background-color;
                 letter-spacing: 1px;
                 border:none;
@@ -67,6 +68,10 @@
                 background: $font-color;
                 border-radius: 5px;
                 font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
+                &::placeholder{
+                    font-size:1.2rem;
+                    color: darken($font-color, 50%);
+                }
                 @include mobile{
                     width:80%;
                     margin: 0 auto;
@@ -90,7 +95,8 @@
                 margin-top: 1rem;
                 width: 100%;
                 font-size:1.4rem;
-                line-height: 1.25;
+                line-height: 1.5;
+                padding: .5rem;
                 color: $background-color;
                 letter-spacing: 1px;
                 border:none;
@@ -110,7 +116,6 @@
         margin-top: 1rem;
         font-size:1.4rem;
         font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-
         cursor: pointer;
         border-radius: 5px;
         width: 22.5%;
