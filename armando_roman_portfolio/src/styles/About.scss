@@ -24,11 +24,14 @@
                 color: $green;
             }
         }
-        p{
-            height: 80%;
+        .copy{
+            height: 85%;
             font-size:1.6rem;
             color: $font-color;
             line-height: 1.5;
+            p{
+                margin: 2% 0;
+            }
         }
     }
     .background-text{
