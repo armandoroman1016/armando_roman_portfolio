@@ -21,12 +21,31 @@ const About = props =>{
                     </p>
                 </div>
             </div>
+            <div className = 'skills'>
+                <h3>Skills and Familiar Technologies</h3>
+                <ul>
+                    <div className = 'li-container'>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>ReactJs</li>
+                    </div>
+                    <div className = 'li-container'>
+                        <li>SCSS</li>
+                        <li>NodeJs</li>
+                        <li>ExpressJs</li>
+                        <li>Relational Databases</li>
+                    </div>
+                </ul>
+            </div>
             <span className = 'background-text javascript'>JAVASCRIPT</span>
             <span className = 'background-text css'>CSS</span>
             <span className = 'background-text react'>REACTJS</span>
             <span className = 'background-text node'>NODE</span>
             <span className = 'background-text python'>PYTHON</span>
             <span className = 'background-text html'>HTML</span>
+            <span className = 'background-text express'>EXPRESSJS</span>
+
         </section>
     )
 }
