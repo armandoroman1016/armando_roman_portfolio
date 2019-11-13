@@ -28,9 +28,60 @@
             height: 85%;
             font-size:1.5rem;
             color: $font-color;
-            line-height: 1.5;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: auto 0;
+            margin-top:10%;
             p{
-                margin: 2% 0;
+                margin:auto 0;
+                height:33%;
+            }
+        }
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $font-color;
+        height:70%;
+        width:28%;
+        position: absolute;
+        right:5%;
+        top: 15%;
+        z-index: 1;
+        border: 2px solid $green;
+        h3{
+            width:100%;
+            background:$green;
+            color: $background-color;
+            height:10%;
+            padding: .3rem 0;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        ul{
+            height:90%;
+            background: rgba($background-color, .5);
+            display: flex;
+            justify-content: space-evenly;
+            .li-container{
+                width: 45%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                li{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
             }
         }
     }
