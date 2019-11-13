@@ -18,16 +18,28 @@
         flex-direction: column;
         justify-content: space-between;
         font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+        @include mobile{
+            bottom: 83%;
+            left: 0%;
+        }
         p{
             font-size: 14rem;
             font-weight:700;
             letter-spacing: .5rem;
+            @include mobile{
+                font-size: 5rem;
+                letter-spacing: 0;
+            }
         }
         .opening-tags{
             color: $green;
             font-size: 1.2rem;
             font-family: 'Nothing You Could Do','Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
             letter-spacing: .1rem;
+            @include mobile{
+                font-size: 1rem;
+                letter-spacing: 0;
+            }
         }
         .web-text{
             position: relative;
@@ -40,6 +52,12 @@
                 transform: rotate(-90deg);
                 color:$font-color;
                 font-weight: 900;
+                @include mobile{
+                    right: 0;
+                    bottom: 40%;
+                    font-size: 1.4rem;
+                    letter-spacing: 0;
+                }
                 .period{
                     color:$orange;
                 }
@@ -55,10 +73,17 @@
         flex-direction: column;
         font-weight:700;
         font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+        @include mobile{
+           bottom: 66%;
+           right: 0;
+        }
         p{
         justify-content: space-between;
         font-size: 14rem;
         letter-spacing: .5rem;
+        @include mobile{
+            font-size: 5rem;
+        }
         
         }
         .closing-tags{
@@ -67,6 +92,10 @@
             text-align: right;
             font-family: 'Nothing You Could Do', 'Liu Jian Mao Cao', 'Merriweather', 'Times New Roman', Times, serif;
             letter-spacing: .1rem;
+            @include mobile{
+                font-size: 1rem;
+                letter-spacing: 0;
+            }
         }
     }
     .name-container{
@@ -78,10 +107,26 @@
         flex-direction: column;
         justify-content: space-around;
         padding-left:62%;
+        @include mobile{
+            position: absolute;
+            top:33%;
+            left: 8%;
+            height:50%;
+            padding: 0;
+            max-width: 100%;
+            font-size: 1rem;
+            letter-spacing: 0;
+        }
         .name{
         font-size:7.8rem;
         font-weight: 900;
         line-height:1.5;
+        @include mobile{
+            font-size:4rem;
+            width: 100vw;
+            padding: 0 8%;
+            transform: translateX(-8%);
+        }
         }
         span{
             color:$green
@@ -91,28 +136,12 @@
             text-align: right;
             margin: 0 12% 5% 0;
             line-height: .5;
-        }
-    }
-    h2{
-        font-size: 4rem;
-        color:  $font-color ;
-        text-shadow: 2px 2px 1px #000000;
-        letter-spacing: 1.5px;
-        line-height: 2;
-        width: 100%;
-        padding: 60px;
-        text-align: right;
-        
-    }
-    .role-landing_page{
-        @include mobile{
-            font-size: 2rem;
-            padding: 20px;
-            margin-right: 10%;
-            position: absolute;
-            width: 80%;
-            top:40%;
-            padding: 0;
+            @include mobile{
+                width: 100vw;
+                text-align: center;
+                margin: 0;
+                transform: translateX(-8%);
+            }
         }
     }
 }
