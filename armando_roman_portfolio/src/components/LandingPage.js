@@ -50,14 +50,14 @@ const LandingPage = props => {
             <NavBar path = {props.location.pathname}/>
             <div class = 'web-dev-container'>
                 <div className = 'web'>
-                <p className = 'opening-tags'>{`<html>`}</p>
+                    <p className = 'opening-tags'>{`<html>`}</p>
                     <p className = 'web-text'>
                         WEB
                         <span className = 'hello'>Hello<span className = 'period'>.</span></span>
                     </p>   
                 </div>
                 <div className = 'dev'>
-                    <p>DEV</p>
+                    <p className = 'dev-text'>DEV</p>
                     <p className = 'closing-tags'>{`</html>`}</p>
                 </div>            
             </div>
