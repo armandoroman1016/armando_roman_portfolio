@@ -44,6 +44,7 @@ const About = props =>{
             <span className = 'background-text node'>NODE</span>
             <span className = 'background-text python'>PYTHON</span>
             <span className = 'background-text html'>HTML</span>
+            <span className = 'background-text express'>EXPRESSJS</span>
 
         </section>
     )

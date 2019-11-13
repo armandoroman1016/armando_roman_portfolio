@@ -89,31 +89,35 @@
         color:$landing-font-background;
         position: absolute;
         font-weight:800;
-        font-size:5rem;
+        font-size:6rem;
         z-index: 0;
     }
     .javascript{
-        top: 8%;
-        right: 3%;
+        top: 4%;
+        right: 7%;
     }
     .css{
-        top: 25%;
-        right: 33%;
+        top: 12%;
+        left: 12%;
     }
     .react{
-        top: 37%;
-        right: 3%;
+        top: 25%;
+        right: 20%;
     }
     .node{
-        top: 53%;
-        right: 26%;
+        top: 45%;
+        right: 2%;
     }
     .html{
-        top:66%;
+        bottom:3%;
         right:3%;
     }
     .python{
-        top:83%;
-        right:12%;
+        bottom:20%;
+        right:15%;
+    }
+    .express{
+        bottom: 3%;
+        left: 17%;
     }
 }
