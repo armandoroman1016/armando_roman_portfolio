@@ -8,28 +8,49 @@
 @import './Contact.scss';
 @import './About.scss';
 
-.page{
+.page {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
 }
 
-.fade-appear
-.fade-enter{
+.fade-appear .fade-enter {
     opacity: 0;
     z-index: 1;
 }
-.fade-appear-active
-.fade-enter.fade-enter-ective{
+
+.fade-appear-active .fade-enter.fade-enter-ective {
     opacity: 1;
     transition: opacity 500ms ease-in-out 150ms
 }
 
-.fade-exit{
+.fade-exit {
     opacity: 1;
 }
 
-.fade-exit.fade-exit-active{
+.fade-exit.fade-exit-active {
     opacity: 0;
     transition: opacity 150ms ease-in-out;
+}
+
+.construction{
+    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+    height: 100vh;
+    width: 100vw;
+    font-size: 3rem;
+    line-height: 1.33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: $background-color;
+    color:$green;
+    font-weight:800;
+    p{
+        width:90%;
+        span{
+            color: $orange;
+        }
+    }
 }

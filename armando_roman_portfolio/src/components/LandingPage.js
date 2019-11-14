@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import {TweenMax, Linear, TimelineMax, Bounce, Back, Power4 } from 'gsap';
-import NavBar from './NavBar'
+// import {TweenMax, Linear, TimelineMax, Bounce, Back, Power4 } from 'gsap';
 
 const LandingPage = props => {
 
@@ -47,8 +46,7 @@ const LandingPage = props => {
 
     return(
         <div className = 'landing-container'>
-            <NavBar path = {props.location.pathname}/>
-            <div class = 'web-dev-container'>
+            <div className = 'web-dev-container'>
                 <div className = 'web'>
                     <p className = 'opening-tags'>{`<html>`}</p>
                     <p className = 'web-text'>
