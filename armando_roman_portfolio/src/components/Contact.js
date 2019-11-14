@@ -31,7 +31,7 @@ const Contact = props => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", values })
+            body: encode({ "contact": "contact", values })
           })
             .then(() => setLoading(false))
             .catch(error => {
@@ -120,6 +120,7 @@ const Contact = props => {
             <div className = 'form-container'>
                 <h2>Contact Armando</h2>
                 <form id = 'contact_form' onSubmit = {handleSubmit}>
+                    <input type="hidden" name="contact" value="contact" />
                     <div className = 'input-container'>
                         <div className = 'name'>
                             <label>Name</label>
@@ -145,7 +146,7 @@ const Contact = props => {
                         <label>Message</label>
                         <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
-                    <button type = 'submit'>
+                    <button type = 'submit' >
                     { loading ?        
                         <ClipLoader
                         sizeUnit={"px"}
