@@ -1,5 +1,12 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {Elastic, TimelineMax, Power4 } from 'gsap';
+import ClipLoader from 'react-spinners/ClipLoader';
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
 const Contact = props => {
 
@@ -11,6 +18,7 @@ const Contact = props => {
         message:''
     })
 
+    const [ loading, setLoading ] = useState('false')
 
     const handleChange = (e) =>{
         setValues({...values, [e.target.name]: e.target.value})
@@ -19,16 +27,17 @@ const Contact = props => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log(values)
-        // axios
-        //     .post('https://armando-roman-portfolio.herokuapp.com/api/contact', values)
-        //     .then( res => console.log(res))
-        //     .catch( err => console.log(err))
-        // setValues({
-        //     name: '',
-        //     phone: '',
-        //     email:'', 
-        //     message:''
-        // })
+        setLoading(true)
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", values })
+          })
+            .then(() => setLoading(false))
+            .catch(error => {
+                setLoading(false)
+                alert(error)
+            });
     }
 
     //?animations
@@ -136,7 +145,15 @@ const Contact = props => {
                         <label>Message</label>
                         <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
-                    <button type = 'submit'>Submit</button>
+                    <button type = 'submit'>
+                    { loading ?        
+                        <ClipLoader
+                        sizeUnit={"px"}
+                        size={30}
+                        color={'#F7F7F7'}
+                      />
+                      : "SUBMIT"
+                    }</button>
                 </form>
             </div>
         </div>
