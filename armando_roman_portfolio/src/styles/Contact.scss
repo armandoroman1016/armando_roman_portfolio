@@ -53,6 +53,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            position: relative;
 
             .input-container {
                 width: 100%;
@@ -127,24 +128,39 @@
             }
         }
 
+    .button_message{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;  
+        height: 10%;  
         button {
             border: none;
             outline: none;
             color: $font-color;
             background: $green;
-            margin-top: 1rem;
             font-size: 1.4rem;
             font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
             cursor: pointer;
             border-radius: 5px;
             width: 22.5%;
-            height: 9%;
+            height: 100%;
 
             @include mobile {
                 position: absolute;
                 right: 10%;
             }
         }
+
+        .response-message{
+            width: 70%;
+            height:100%;
+            color: $green;
+            font-size:1.6rem;
+            font-weight: 800;
+        }
+    }
     }
 }
 

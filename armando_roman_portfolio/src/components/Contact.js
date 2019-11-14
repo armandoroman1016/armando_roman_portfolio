@@ -18,7 +18,8 @@ const Contact = props => {
         message:''
     })
 
-    const [ loading, setLoading ] = useState('false')
+    const [ message, setMessage ] = useState("Unfortunately your message was unable to send at the moment.")
+    const [ loading, setLoading ] = useState(false)
 
     const handleChange = (e) =>{
         setValues({...values, [e.target.name]: e.target.value})
@@ -26,17 +27,19 @@ const Contact = props => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(values)
         setLoading(true)
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "contact": "contact", values })
+            body: encode({ "form-name": "contact", ...values })
           })
-            .then(() => setLoading(false))
+            .then(() => {
+                setLoading(false)
+                setMessage("Thank you, I'll get back to you ASAP")
+            })
             .catch(error => {
                 setLoading(false)
-                alert(error)
+                setMessage("Unfortunately your message was unable to send at the moment.")
             });
     }
 
@@ -120,7 +123,6 @@ const Contact = props => {
             <div className = 'form-container'>
                 <h2>Contact Armando</h2>
                 <form id = 'contact_form' onSubmit = {handleSubmit}>
-                    <input type="hidden" name="contact" value="contact" />
                     <div className = 'input-container'>
                         <div className = 'name'>
                             <label>Name</label>
@@ -146,15 +148,21 @@ const Contact = props => {
                         <label>Message</label>
                         <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
+                    <div className = 'button_message'>
                     <button type = 'submit' >
                     { loading ?        
                         <ClipLoader
                         sizeUnit={"px"}
                         size={30}
                         color={'#F7F7F7'}
-                      />
-                      : "SUBMIT"
+                        />
+                        : "SUBMIT"
                     }</button>
+                    { message ? 
+                         null 
+                        :<p className = 'response-message'>{message}</p>
+                    }
+                    </div>
                 </form>
             </div>
         </div>
