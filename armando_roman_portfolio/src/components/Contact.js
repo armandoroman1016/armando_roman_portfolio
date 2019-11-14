@@ -27,16 +27,15 @@ const Contact = props => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(values)
         setLoading(true)
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", values })
+            body: encode({ "form-name": "contact", ...values })
           })
             .then(() => {
-                setMessage("Thank you, I'll get back to you ASAP")
                 setLoading(false)
+                setMessage("Thank you, I'll get back to you ASAP")
             })
             .catch(error => {
                 setLoading(false)
@@ -124,7 +123,6 @@ const Contact = props => {
             <div className = 'form-container'>
                 <h2>Contact Armando</h2>
                 <form id = 'contact_form' onSubmit = {handleSubmit}>
-                    <input type="hidden" name="contact" value="contact" />
                     <div className = 'input-container'>
                         <div className = 'name'>
                             <label>Name</label>
