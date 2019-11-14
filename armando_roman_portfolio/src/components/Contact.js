@@ -18,7 +18,8 @@ const Contact = props => {
         message:''
     })
 
-    const [ loading, setLoading ] = useState('false')
+    const [ message, setMessage ] = useState("Unfortunately your message was unable to send at the moment.")
+    const [ loading, setLoading ] = useState(false)
 
     const handleChange = (e) =>{
         setValues({...values, [e.target.name]: e.target.value})
@@ -31,12 +32,15 @@ const Contact = props => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "contact": "contact", values })
+            body: encode({ "form-name": "contact", values })
           })
-            .then(() => setLoading(false))
+            .then(() => {
+                setMessage("Thank you, I'll get back to you ASAP")
+                setLoading(false)
+            })
             .catch(error => {
                 setLoading(false)
-                alert(error)
+                setMessage("Unfortunately your message was unable to send at the moment.")
             });
     }
 
@@ -146,15 +150,21 @@ const Contact = props => {
                         <label>Message</label>
                         <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
+                    <div className = 'button_message'>
                     <button type = 'submit' >
                     { loading ?        
                         <ClipLoader
                         sizeUnit={"px"}
                         size={30}
                         color={'#F7F7F7'}
-                      />
-                      : "SUBMIT"
+                        />
+                        : "SUBMIT"
                     }</button>
+                    { message ? 
+                         null 
+                        :<p className = 'response-message'>{message}</p>
+                    }
+                    </div>
                 </form>
             </div>
         </div>
