@@ -1,9 +1,4 @@
 import React, {useRef, useEffect, useState} from 'react'
-import axios from 'axios'
-import NavBar from './NavBar'
-import github from '../assests/images/github.png'
-import gmail from '../assests/images/gmail.png'
-import linkedin from '../assests/images/linkedin.png'
 import {Elastic, TimelineMax, Power4 } from 'gsap';
 
 const Contact = props => {

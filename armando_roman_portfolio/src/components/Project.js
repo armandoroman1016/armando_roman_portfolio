@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import computer from '../assests/images/computer.png'
 import github from '../assests/images/github.png'
 import VisibilitySensor from "react-visibility-sensor";
@@ -13,8 +13,6 @@ const Project = props => {
     if (project.hasMobileMock) {
         className = 'mobile-mock'
     }
-
-    let container = useRef(null)
 
     return (
         <>
@@ -31,7 +29,6 @@ const Project = props => {
                         {props => (
                             <div
                                 className='project-container'
-                                ref={element => { container = element }}
                                 style={props}>
                                 <h2 className='project-header'>{project.projectName}</h2>
                                 <div className='img-description'>

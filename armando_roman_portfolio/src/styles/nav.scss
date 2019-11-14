@@ -1,47 +1,52 @@
-
-.nav-bar{
+.nav-bar {
     position: fixed;
     height: 100vh;
     width: 10%;
     left: 0;
-    top:0;
+    top: 0;
     z-index: 10;
     background: #131313;
-    font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-    @include mobile{
-        height:10vh;
+    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+
+    @include mobile {
+        height: 10vh;
         width: 100vw;
         top: 90%;
         left: 0;
         right: 0;
         bottom: 0;
     }
-    .nav-links{
+
+    .nav-links {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        color : $font-color ;
+        color: $font-color;
         font-size: 1.6rem;
         list-style: none;
-        :hover{
+
+        :hover {
             text-shadow: 0 0 5px $orange;
         }
-        @include mobile{
-            width:100%;
+
+        @include mobile {
+            width: 100%;
             height: 100%;
             flex-direction: row;
             font-size: 1.4rem;
             margin: auto 0;
         }
-        .nav-item{
+
+        .nav-item {
             cursor: pointer;
             text-align: center;
             width: 100%;
-            @include mobile{
+
+            @include mobile {
                 text-align: center;
             }
         }
-}
+    }
 }

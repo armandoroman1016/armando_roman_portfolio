@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 
 const NavBar = props => {
 
-    
+    // const { width } = props
+
     return (
         <div className = 'nav-bar'  >
             <ul className = 'nav-links'>

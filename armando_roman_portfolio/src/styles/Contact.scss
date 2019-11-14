@@ -1,164 +1,186 @@
-.contact-container{
+.contact-container {
     position: relative;
-    height:100vh;
-    width:100vw;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     background: $background-color;
-    font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
+    font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
     z-index: -2;
-    @include mobile{
-        width:100%;
-        height:100%;
+
+    @include mobile {
+        width: 100%;
+        height: 100%;
         padding-bottom: 38%;
     }
 
-.form-container{
-    margin: 2% 5% auto 27%;
-    background-color: rgba(105, 105, 105, .1);
-    width: 52%;
-    height: 85%;
-    padding: 0 3rem 3rem 3rem;
-    border-radius: 5px;
-    z-index: 1;
-    @include mobile{
-        padding: 0;
-        margin: 0;
-        width: 90%;
-        height: 100%;
-        margin: 5% auto;
-        margin-top: 10%;
-    }
-    h2{
-        margin: 0;
-        padding-top: 1rem;
-        color: $font-color;
-        text-align: center;
-        font-size:3rem;
-        height: 10%;
-        @include mobile{
+    .form-container {
+        margin: 2% 5% auto 27%;
+        background-color: rgba(105, 105, 105, 0.1);
+        width: 52%;
+        height: 85%;
+        padding: 0 3rem 3rem 3rem;
+        border-radius: 5px;
+        z-index: 1;
+
+        @include mobile {
             padding: 0;
             margin: 0;
-            font-size: 2rem;
-            padding: 8% 0;
+            width: 90%;
+            height: 100%;
+            margin: 5% auto;
+            margin-top: 10%;
         }
-    }
-    #contact_form{
-        height:90%;
-        widows: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        .input-container{
-            width:100%;
-            display: flex;
-            justify-content: space-between;
-            .name, .phone, .email, .company{
-                width:46%;
-            }
-            input{
-                width: 100%;
-                height: 60%;
-                margin: 1rem 0;
-                font-size:1.3rem;
-                padding: 0 .5rem;
-                color: $background-color;
-                letter-spacing: 1px;
-                border:none;
-                fill:solid;
-                background: $font-color;
-                border-radius: 5px;
-                font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-                &::placeholder{
-                    font-size:1.2rem;
-                    color: darken($font-color, 50%);
-                }
-                @include mobile{
-                    width:80%;
-                    margin: 0 auto;
-                    margin: 10% auto;
-                }
-            }
-            label{
-                font-size:1.4rem;
-                color: $font-color;
-                @include mobile{
-                    margin: 0 auto;
-                    left: 10%;
-                    top: 28%;
-                }
-            }
-        }
-        .message{
-            display: flex;
-            flex-direction: column;
-            textarea{
-                margin-top: 1rem;
-                width: 100%;
-                font-size:1.4rem;
-                line-height: 1.5;
-                padding: .5rem;
-                color: $background-color;
-                letter-spacing: 1px;
-                border:none;
-                fill:solid;
-                background: $font-color;
-                border-radius: 5px;
-                font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
+
+        h2 {
+            margin: 0;
+            padding-top: 1rem;
+            color: $font-color;
+            text-align: center;
+            font-size: 3rem;
+            height: 10%;
+
+            @include mobile {
+                padding: 0;
+                margin: 0;
+                font-size: 2rem;
+                padding: 8% 0;
             }
         }
 
-    }
-    button{
-        border: none;
-        outline: none;
-        color: $font-color;
-        background: $green;
-        margin-top: 1rem;
-        font-size:1.4rem;
-        font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-        cursor: pointer;
-        border-radius: 5px;
-        width: 22.5%;
-        height: 9%;
-        @include mobile{
-            position: absolute;
-            right:10%;
+        #contact_form {
+            height: 90%;
+            widows: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .input-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .name,
+                .phone,
+                .email,
+                .company {
+                    width: 46%;
+                }
+
+                input {
+                    width: 100%;
+                    height: 60%;
+                    margin: 1rem 0;
+                    font-size: 1.3rem;
+                    padding: 0 0.5rem;
+                    color: $background-color;
+                    letter-spacing: 1px;
+                    border: none;
+                    fill: solid;
+                    background: $font-color;
+                    border-radius: 5px;
+                    font-family: "Montserrat", "Merriweather", "Times New Roman", Times,
+                        serif;
+
+                    &::placeholder {
+                        font-size: 1.2rem;
+                        color: darken($font-color, 50%);
+                    }
+
+                    @include mobile {
+                        width: 80%;
+                        margin: 0 auto;
+                        margin: 10% auto;
+                    }
+                }
+
+                label {
+                    font-size: 1.4rem;
+                    color: $font-color;
+
+                    @include mobile {
+                        margin: 0 auto;
+                        left: 10%;
+                        top: 28%;
+                    }
+                }
+            }
+
+            .message {
+                display: flex;
+                flex-direction: column;
+
+                textarea {
+                    margin-top: 1rem;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                    padding: 0.5rem;
+                    color: $background-color;
+                    letter-spacing: 1px;
+                    border: none;
+                    fill: solid;
+                    background: $font-color;
+                    border-radius: 5px;
+                    font-family: "Montserrat", "Merriweather", "Times New Roman", Times,
+                        serif;
+                }
+            }
+        }
+
+        button {
+            border: none;
+            outline: none;
+            color: $font-color;
+            background: $green;
+            margin-top: 1rem;
+            font-size: 1.4rem;
+            font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 22.5%;
+            height: 9%;
+
+            @include mobile {
+                position: absolute;
+                right: 10%;
+            }
         }
     }
 }
-}
-.circle-one{
-    height:250px;
+
+.circle-one {
+    height: 250px;
     width: 250px;
     background: $light-grey;
     background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
     border-radius: 50%;
     position: absolute;
-    top:4rem;
+    top: 4rem;
     left: 14rem;
     position: fixed;
     z-index: -1;
 }
-.circle-two{
-    height:175px;
+
+.circle-two {
+    height: 175px;
     width: 175px;
     background: $light-grey;
     background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
     border-radius: 50%;
     position: absolute;
-    top:22rem;
+    top: 22rem;
     left: 25rem;
     z-index: -1;
-
 }
-.circle-three{
-    height:222px;
+
+.circle-three {
+    height: 222px;
     width: 222px;
     background: $light-grey;
     background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
     border-radius: 50%;
     position: absolute;
     z-index: -1;
-    bottom:1rem;
+    bottom: 1rem;
     left: 12rem;
 }
