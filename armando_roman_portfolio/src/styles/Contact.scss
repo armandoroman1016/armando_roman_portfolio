@@ -64,15 +64,15 @@
                 .phone,
                 .email,
                 .company {
-                    width: 46%;
+                    width: 48%;
                 }
 
                 input {
                     width: 100%;
-                    height: 60%;
+                    height: 55%;
                     margin: 1rem 0;
                     font-size: 1.3rem;
-                    padding: 0 0.5rem;
+                    // padding-left: 0.5rem;
                     color: $background-color;
                     letter-spacing: 1px;
                     border: none;
@@ -97,7 +97,14 @@
                 label {
                     font-size: 1.4rem;
                     color: $font-color;
-
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        text-align: right;
+                        width: 55%;
+                        font-size:1rem;
+                        color: $orange
+                    }
                     @include mobile {
                         margin: 0 auto;
                         left: 10%;
@@ -168,7 +175,7 @@
     height: 250px;
     width: 250px;
     background: $light-grey;
-    background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
+    background: linear-gradient(220deg, $green 0%, $background-color 100%);
     border-radius: 50%;
     position: absolute;
     top: 4rem;
@@ -181,7 +188,7 @@
     height: 175px;
     width: 175px;
     background: $light-grey;
-    background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
+    background: linear-gradient(220deg, $orange 0%, $background-color 100%);
     border-radius: 50%;
     position: absolute;
     top: 22rem;
@@ -193,7 +200,7 @@
     height: 222px;
     width: 222px;
     background: $light-grey;
-    background: linear-gradient(220deg, $font-color 0%, $light-grey 100%);
+    background: linear-gradient(220deg, $green 0%, $background-color 100%);
     border-radius: 50%;
     position: absolute;
     z-index: -1;

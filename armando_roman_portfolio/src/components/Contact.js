@@ -10,6 +10,7 @@ const encode = (data) => {
 
 const Contact = props => {
 
+
     const [ values, setValues ] = useState({
         name: '',
         phone: '',
@@ -18,8 +19,9 @@ const Contact = props => {
         message:''
     })
 
-    const [ message, setMessage ] = useState("Unfortunately your message was unable to send at the moment.")
+    const [ message, setMessage ] = useState(null)
     const [ loading, setLoading ] = useState(false)
+    const [ submitted, setSubmitted ] = useState(false)
 
     const handleChange = (e) =>{
         setValues({...values, [e.target.name]: e.target.value})
@@ -27,20 +29,23 @@ const Contact = props => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        setLoading(true)
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...values })
-          })
-            .then(() => {
-                setLoading(false)
-                setMessage("Thank you, I'll get back to you ASAP")
-            })
-            .catch(error => {
-                setLoading(false)
-                setMessage("Unfortunately your message was unable to send at the moment.")
-            });
+        setSubmitted(true)
+        if( (values.email || values.phone) && values.name && values.company ){
+            setLoading(true)
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", ...values })
+              })
+                .then(() => {
+                    setLoading(false)
+                    setMessage("Thank you, I'll get back to you ASAP")
+                })
+                .catch(() => {
+                    setLoading(false)
+                    setMessage("Unfortunately your message was unable to send at the moment.")
+                });
+        }
     }
 
     //?animations
@@ -125,23 +130,35 @@ const Contact = props => {
                 <form id = 'contact_form' onSubmit = {handleSubmit}>
                     <div className = 'input-container'>
                         <div className = 'name'>
-                            <label>Name</label>
-                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} placeholder = 'Name' required/>
+                            <label>
+                                Name
+                                { submitted && !values.name ? <p>*Required</p> : null}
+                            </label>
+                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} placeholder = 'Name'/>
                         </div>
                         <div className = 'phone'>
-                            <label>Phone Number</label>
-                            <input type = 'text' name = 'phone' value = {values.phone} placeholder = 'Phone' onChange={handleChange} required/>
+                            <label>
+                                Phone
+                                { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
+                            </label>
+                            <input type = 'text' name = 'phone' value = {values.phone} placeholder = 'Phone' onChange={handleChange}/>
                         </div>
                     </div>
                     <div className = 'input-container'>
                         <div className = 'email'>
-                            <label>Email</label>
-                            <input type = 'text' name = 'email' value = {values.email} placeholder = 'Email' onChange={handleChange} required/>
+                            <label>
+                                Email
+                                { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
+                            </label>
+                            <input type = 'text' name = 'email' value = {values.email} placeholder = 'Email' onChange={handleChange} />
                     
                         </div>
                         <div className = 'company'>
-                            <label>Company Name</label>
-                            <input type = 'text' name = 'company' value = {values.company} placeholder = 'Company Name' onChange={handleChange} required/>
+                            <label>
+                                Company
+                                { submitted && !values.company ? <p>*Required</p> : null}
+                            </label>
+                            <input type = 'text' name = 'company' value = {values.company} placeholder = 'Company Name' onChange={handleChange}/>
                         </div>
                     </div>
                     <div className = 'input-container message'>
@@ -150,17 +167,17 @@ const Contact = props => {
                     </div>
                     <div className = 'button_message'>
                     <button type = 'submit' >
-                    { loading ?        
-                        <ClipLoader
+                    { !loading ?        
+                        "SUBMIT"
+                        : <ClipLoader
                         sizeUnit={"px"}
                         size={30}
                         color={'#F7F7F7'}
                         />
-                        : "SUBMIT"
                     }</button>
                     { message ? 
-                         null 
-                        :<p className = 'response-message'>{message}</p>
+                        <p className = 'response-message'>{message}</p>
+                        : null 
                     }
                     </div>
                 </form>
