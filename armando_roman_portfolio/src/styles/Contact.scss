@@ -139,8 +139,8 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        align-items: center;
-        align-content: center;  
+        align-content: center;
+        // align-content: center;  
         height: 10%;  
         button {
             border: none;
@@ -162,7 +162,7 @@
 
         .response-message{
             width: 70%;
-            height:100%;
+            margin: auto 0;
             color: $green;
             font-size:1.6rem;
             font-weight: 800;
