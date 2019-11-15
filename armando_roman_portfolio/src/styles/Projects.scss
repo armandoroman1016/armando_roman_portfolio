@@ -3,9 +3,9 @@
     background: $background-color;
     min-height: 100vh;
     font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-    h1{
-        font-size:3.6rem;
-        text-align: left;
+    @include mobile{
+        min-height: 0;
+        padding: 8% 0;
     }
     .projects-container{
         width: 65%;
@@ -15,18 +15,24 @@
         justify-content: flex-start;
         margin-left: 18%;
         margin-top: 5%;
+
         @include mobile{
+
             width: 100%;
             justify-content: space-around;
             margin-left: 0;
-            padding-bottom: 20%;
+            
         }
         h1{
         color: $font-color;
         text-decoration-line: underline;
+        font-size:3.6rem;
+        text-align: left;
+
         @include mobile{
-            margin-left: 5%;
-            text-decoration-line: none;
+            font-size:2.4rem;
+            margin-left: 8%;
+            text-decoration-line: underline;
             margin-bottom: 4%;
         }
         }
@@ -42,14 +48,17 @@
             @include mobile{
                 padding: 0;
                 margin: 0;
-                width: 90%;
-                margin: 6% auto;
+                width: 100%;
+                margin: 3% 0 0 8%;
                 justify-content: space-between;
             }
             .project-header{
                 font-size:2.6rem;
                 width: 90%;
                 z-index: 1;
+                @include mobile{
+                    font-size:1.6rem;
+                }
             }
             .img-description{
                 display: flex;
@@ -59,6 +68,8 @@
                 height:100%;
                 @include mobile{
                     flex-direction: column;
+                    width:80%;
+                    margin-top: 3%;
                 }
             img{
                 width: 35%;
@@ -67,15 +78,17 @@
                 z-index: 0;
                 filter: drop-shadow(0px 5px 3px black);
                 @include mobile{
-                    width: 80%;
-                    margin-top: -20%;
+                    margin: 0;
+                    width: 88%;
+                    // margin-top: 20%;
                 }
             }
             .mobile-mock{
                 transform: translateY(8%);
                 @include mobile{
+                    transform: translateY(0);
                     width: 80%;
-                    margin-top: -10%;
+                    margin-top: 3%;
                 }
             }
             .project-description{
@@ -84,7 +97,8 @@
                 width: 60%;
                 color: $font-color;
                 @include mobile{
-                    width: 95%;
+                    width: 100%;
+                    font-size:1.2rem;
                 }
             }
         }
@@ -96,12 +110,16 @@
                 margin-top:6%;
                 @include mobile{
                     flex-direction: column;
-                    height:10%;
-                    margin-top: 8%;
+                    height:5%;
+
+                    margin-top: 3%;
                     align-items: flex-start;
                 }
                 .project-link{
                     margin: 0 0 20px 20px;
+                    @include mobile{
+                        margin: 2% 0;
+                     }
                     a{
                         font-size:1.4rem;
                         text-decoration: none;
@@ -111,6 +129,7 @@
                         align-items: center;
                         @include mobile{
                            width: 100%;
+                           font-size:1rem;
                         }
                     }
                     .icon{

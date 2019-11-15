@@ -11,10 +11,9 @@
     @include mobile {
         height: 10vh;
         width: 100vw;
-        top: 90%;
         left: 0;
         right: 0;
-        bottom: 0;
+        top: 100%;
     }
 
     .nav-links {
