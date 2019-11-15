@@ -21,7 +21,7 @@
         font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
 
         @include mobile {
-            bottom: 80%;
+            bottom: 70%;
             left: 0%;
             margin-left: 8%;
         }
@@ -64,7 +64,7 @@
 
                 @include mobile {
                     right: -33%;
-                    bottom: 62%;
+                    bottom: 60%;
                     font-size: 1.5rem;
                     letter-spacing: .3rem;
                     ;
@@ -88,7 +88,7 @@
         font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
 
         @include mobile {
-            bottom: 64%;
+            bottom: 54%;
             left: 0;
             right: 0;
             text-align: right;
@@ -135,8 +135,8 @@
 
         @include mobile {
             position: absolute;
-            top: 33%;
-            left: 8%;
+            top: 43%;
+            margin-left: 8%;
             height: 50%;
             padding: 0;
             max-width: 100%;
@@ -151,9 +151,7 @@
 
             @include mobile {
                 font-size: 4rem;
-                width: 100vw;
-                padding: 0 8%;
-                transform: translateX(-8%);
+                width: 82%;
             }
         }
 

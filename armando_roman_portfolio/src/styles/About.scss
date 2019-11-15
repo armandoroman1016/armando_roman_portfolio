@@ -6,7 +6,11 @@
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
     background: $background-color;
     z-index: -1;
-
+    @include mobile {
+        height: 100%;
+        overflow: hidden;
+        padding: 8% 0;
+    }
     .about-text {
         position: absolute;
         top: 8%;
@@ -18,10 +22,20 @@
         flex-direction: column;
         justify-content: space-between;
         z-index: 1;
-
+        @include mobile {
+            position: sticky;
+            top:0;
+            left: 0;
+            padding: 0 8%;
+            width: 100%;
+            height: 100%;
+        }
         h2 {
             font-size: 3.2rem;
-
+            @include mobile {
+                font-size: 2rem;
+                width: 82%;
+            }
             span {
                 color: $green;
             }
@@ -38,10 +52,17 @@
             margin: auto 0;
             margin-top: 3%;
             padding: 2% 0;
-
+            @include mobile {
+                font-size:1.2rem;
+                line-height: 1.5;
+            }
             p {
                 margin: auto 0;
                 height: 33%;
+                @include mobile {
+                    width: 80%;
+                    margin: 5% 0;
+                }
             }
         }
     }
@@ -59,6 +80,13 @@
         z-index: 1;
         border: 2px solid $green;
 
+        @include mobile{
+            left: 8%;
+            width: 82%;
+            height: 100%;
+            position: sticky;
+
+        }
         h3 {
             width: 100%;
             background: $green;
@@ -70,6 +98,11 @@
             align-items: center;
             justify-content: center;
             font-weight: 900;
+            @include mobile{
+                font-size:1.4rem;
+                text-align: center;
+                line-height: 1.25;
+            }
         }
 
         ul {
@@ -77,20 +110,27 @@
             background: rgba($background-color, .5);
             display: flex;
             justify-content: space-evenly;
-
+            @include mobile{
+                height: 100%;
+            }
             .li-container {
                 width: 45%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-
+                @include mobile{
+                    padding: 5% 0;
+                }
                 li {
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-align: center;
+                    @include mobile{
+                        font-size: 1.2rem;
+                        padding: 13% 0;
+                    }
                 }
-
             }
         }
     }
