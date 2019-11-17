@@ -23,7 +23,7 @@
         justify-content: space-between;
         z-index: 1;
         @include mobile {
-            position: sticky;
+            position: relative;
             top:0;
             left: 0;
             padding: 0 8%;
@@ -55,6 +55,7 @@
             @include mobile {
                 font-size:1.2rem;
                 line-height: 1.5;
+                height:80%
             }
             p {
                 margin: auto 0;

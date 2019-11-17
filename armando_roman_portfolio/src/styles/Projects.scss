@@ -1,13 +1,20 @@
-.projects-section{
+.projects-section {
     overflow: hidden;
     background: $background-color;
     min-height: 100vh;
-    font-family: 'Montserrat' ,'Merriweather', 'Times New Roman', Times, serif;
-    @include mobile{
+    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+
+    @include tablet {
+        min-height: 0;
+        padding: 3% 8%;
+    }
+
+    @include mobile {
         min-height: 0;
         padding: 8% 0;
     }
-    .projects-container{
+
+    .projects-container {
         width: 65%;
         height: 100%;
         display: flex;
@@ -16,124 +23,191 @@
         margin-left: 18%;
         margin-top: 5%;
 
-        @include mobile{
+        @include tablet {
+            margin-left: 0;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        @include mobile {
 
             width: 100%;
             justify-content: space-around;
             margin-left: 0;
-            
-        }
-        h1{
-        color: $font-color;
-        text-decoration-line: underline;
-        font-size:3.6rem;
-        text-align: left;
 
-        @include mobile{
-            font-size:2.4rem;
-            margin-left: 8%;
+        }
+
+        h1 {
+            color: $font-color;
             text-decoration-line: underline;
-            margin-bottom: 4%;
+            font-size: 3.6rem;
+            text-align: left;
+
+
+            @include mobile {
+                font-size: 2.4rem;
+                margin-left: 8%;
+                text-decoration-line: underline;
+                margin-bottom: 4%;
+            }
         }
-        }
-        .project-container{
-            width: 92%; 
+
+        .project-container {
+            width: 92%;
             padding: 2rem 0;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             margin: 50px 0;
             color: $font-color;
-            border-radius: 10px;
-            @include mobile{
+
+            @include tablet {
+                padding: 4rem 0 0 0;
+                margin: 0;
+                width: 100%;
+                position: relative;
+            }
+
+            @include mobile {
                 padding: 0;
                 margin: 0;
                 width: 100%;
                 margin: 3% 0 0 8%;
                 justify-content: space-between;
             }
-            .project-header{
-                font-size:2.6rem;
+
+            .project-header {
+                font-size: 2.6rem;
                 width: 90%;
                 z-index: 1;
-                @include mobile{
-                    font-size:1.6rem;
+
+                @include tablet {
+                    font-size:2rem;
+                    margin-bottom: 5%;
+                    font-weight: 800;
+                }
+
+                @include mobile {
+                    font-size: 1.6rem;
                 }
             }
-            .img-description{
+
+            .img-description {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                height:100%;
-                @include mobile{
+                height: 100%;
+
+                @include tablet {
+                    flex-wrap: wrap;
+                }
+
+                @include mobile {
                     flex-direction: column;
-                    width:80%;
-                    margin-top: 3%;
-                }
-            img{
-                width: 35%;
-                height:auto;
-                margin-top: -10%;
-                z-index: 0;
-                filter: drop-shadow(0px 5px 3px black);
-                @include mobile{
-                    margin: 0;
-                    width: 88%;
-                    // margin-top: 20%;
-                }
-            }
-            .mobile-mock{
-                transform: translateY(8%);
-                @include mobile{
-                    transform: translateY(0);
                     width: 80%;
                     margin-top: 3%;
                 }
-            }
-            .project-description{
-                font-size:1.6rem;
-                line-height: 1.5;
-                width: 60%;
-                color: $font-color;
-                @include mobile{
-                    width: 100%;
-                    font-size:1.2rem;
+
+                img {
+                    width: 35%;
+                    height: auto;
+                    margin-top: -10%;
+                    z-index: 0;
+                    filter: drop-shadow(0px 5px 3px black);
+
+                    @include tablet {
+                        margin: 0;
+                        margin-top: 4%;
+                        width: 40%;
+                    }
+
+                    @include mobile {
+                        margin: 0;
+                        width: 88%;
+                        // margin-top: 20%;
+                    }
+                }
+
+                .mobile-mock {
+                    transform: translateY(8%);
+
+                    @include tablet {
+                        transform: translateY(0);
+                    }
+
+                    @include mobile {
+                        transform: translateY(0);
+                        width: 80%;
+                        margin-top: 3%;
+                    }
+                }
+
+                .project-description {
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                    width: 60%;
+                    color: $font-color;
+
+                    @include tablet {
+                        width: 100%;
+                    }
+
+                    @include mobile {
+                        width: 100%;
+                        font-size: 1.2rem;
+                    }
                 }
             }
-        }
-            .project-links{
+
+            .project-links {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top:6%;
-                @include mobile{
-                    flex-direction: column;
-                    height:5%;
+                margin-top: 6%;
 
+                @include tablet {
+                    flex-direction: column;
+                    height: 30%;
+                    width: 40%;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    position: absolute;
+                    bottom: 8%;
+                    right: 10%;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                    height: 5%;
                     margin-top: 3%;
                     align-items: flex-start;
                 }
-                .project-link{
+
+                .project-link {
                     margin: 0 0 20px 20px;
-                    @include mobile{
+
+                    @include mobile {
                         margin: 2% 0;
-                     }
-                    a{
-                        font-size:1.4rem;
+                    }
+
+                    a {
+                        font-size: 1.4rem;
                         text-decoration: none;
                         width: 100%;
                         color: $font-color;
                         display: flex;
                         align-items: center;
-                        @include mobile{
-                           width: 100%;
-                           font-size:1rem;
+
+                        @include mobile {
+                            width: 100%;
+                            font-size: 1rem;
                         }
                     }
-                    .icon{
-                        width:48px;
+
+                    .icon {
+                        width: 48px;
                         cursor: pointer;
                         padding-right: 10px;
                     }

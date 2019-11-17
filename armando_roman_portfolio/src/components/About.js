@@ -1,6 +1,7 @@
 import React from 'react'
 
-const About = props =>{
+const About = () =>{
+    
     return(
         <section className = 'about-container page'>
             <div className = 'about-text'>

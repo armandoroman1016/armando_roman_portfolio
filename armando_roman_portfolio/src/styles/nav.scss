@@ -16,6 +16,13 @@
         top: 100%;
     }
 
+    @include tablet {
+        height: 10vh;
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
     .nav-links {
         height: 100%;
         display: flex;
@@ -25,6 +32,10 @@
         color: $font-color;
         font-size: 1.6rem;
         list-style: none;
+
+        @include tablet {
+            flex-direction: row;   
+        }
 
         :hover {
             text-shadow: 0 0 5px $orange;
@@ -46,6 +57,7 @@
             @include mobile {
                 text-align: center;
             }
+
         }
     }
 }
