@@ -43,7 +43,7 @@ const Contact = () => {
                 })
                 .catch(() => {
                     setLoading(false)
-                    setMessage("Unfortunately your message was unable to send at the moment.")
+                    setMessage("Your message was unable to send")
                 });
         }
     }

@@ -7,7 +7,7 @@
     z-index: 10;
     background: #131313;
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
-
+    
     @include mobile {
         height: 10vh;
         width: 100vw;

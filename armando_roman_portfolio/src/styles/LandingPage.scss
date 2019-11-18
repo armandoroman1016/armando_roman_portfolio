@@ -9,7 +9,7 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-
+    
 
     .web {
         color: $landing-font-background;
@@ -29,6 +29,8 @@
         }
 
         @include mobile {
+            bottom: 0;
+            left: 0;
             bottom: 70%;
             left: 0%;
             margin-left: 8%;
