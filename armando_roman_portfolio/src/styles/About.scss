@@ -12,11 +12,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        height: 100%;
         padding: 3rem 0;
     }
 
     @include mobile {
-        height: 100%;
         padding: 8% 0;
     }
 
@@ -39,8 +39,11 @@
             padding: 0;
             width: 84%;
             margin: 0 auto ;
-            height: 62.5%;
+            height: auto;
+            margin-bottom: 5% ;
         }
+
+
 
         @include mobile {
             position: relative;
@@ -97,8 +100,13 @@
                 height: 33%;
 
                 @include xl-tablet {
+                    font-size:1.5rem;
                     height: auto;
                     padding: 2rem 0 0 0;
+                }
+
+                @include tablet {
+                    font-size:1.4rem;
                 }
 
                 @include mobile {
@@ -132,7 +140,7 @@
             bottom: auto;
             width: 84%;
             margin: 0 auto;
-            height: 35%;
+            height: 100%;
         }
 
         @include mobile {
@@ -153,6 +161,10 @@
             align-items: center;
             justify-content: center;
             font-weight: 900;
+
+            @include xl-tablet{
+                padding: 1.5rem 0;
+            }
 
             @include mobile {
                 font-size: 1.4rem;
@@ -186,6 +198,15 @@
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-align: center;
+                    
+                    @include xl-tablet {
+                        font-size: 1.7rem;
+                        padding: 2rem 0;
+                    }
+
+                    @include tablet{
+                        padding: 1.2rem 0;
+                    }
 
                     @include mobile {
                         font-size: 1.2rem;
