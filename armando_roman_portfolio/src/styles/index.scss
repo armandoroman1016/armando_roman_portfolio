@@ -12,6 +12,9 @@
     position: absolute;
     left: 0;
     right: 0;
+    @include xl-tablet{
+       position: relative;
+    }
     @include mobile{
         position: relative;
      }
@@ -34,26 +37,4 @@
 .fade-exit.fade-exit-active {
     opacity: 0;
     transition: opacity 150ms ease-in-out;
-}
-
-.construction{
-    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
-    height: 100vh;
-    width: 100vw;
-    font-size: 3rem;
-    line-height: 1.33;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: $background-color;
-    color:$green;
-    font-weight:800;
-    p{
-        width:90%;
-        span{
-            color: $orange;
-        }
-    }
 }

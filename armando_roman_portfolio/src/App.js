@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
     <NavBar width = {width}/>
-      { width > 767 ?
+      { width > 1400 ?
         <div>
           <Route render= {({location}) => (
             <TransitionGroup>
@@ -35,19 +35,12 @@ function App() {
             </TransitionGroup>
                 )}/>
           </div>
-          : <div>
-          {/* //goes in div above */}
-          {/* className = 'construction' */}
-          {/*    
-            <p>Armando Roman's mobile view is currently under construction.</p>
-            <br />
-            <br />
-            <p>Please view on your desktop.<br/>Thank You <span>:)</span></p> */}
+          : <>
             <LandingPage />
             <Projects />
             <About />
             <Contact />
-          </div>
+          </>
       }
     </div>
   );

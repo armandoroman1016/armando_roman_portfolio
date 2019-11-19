@@ -7,13 +7,20 @@
     z-index: 10;
     background: #131313;
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
-
+    
     @include mobile {
         height: 10vh;
         width: 100vw;
         left: 0;
         right: 0;
         top: 100%;
+    }
+
+    @include xl-tablet {
+        height: 10vh;
+        width: 100vw;
+        left: 0;
+        right: 0;
     }
 
     .nav-links {
@@ -25,6 +32,10 @@
         color: $font-color;
         font-size: 1.6rem;
         list-style: none;
+
+        @include xl-tablet {
+            flex-direction: row;   
+        }
 
         :hover {
             text-shadow: 0 0 5px $orange;
@@ -46,6 +57,7 @@
             @include mobile {
                 text-align: center;
             }
+
         }
     }
 }

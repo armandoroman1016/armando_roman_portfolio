@@ -8,9 +8,9 @@ const encode = (data) => {
         .join("&");
   }
 
-const Contact = props => {
+const Contact = () => {
 
-
+ // TODO form not working on mobile, might be a styling issue with height
     const [ values, setValues ] = useState({
         name: '',
         phone: '',
@@ -30,7 +30,7 @@ const Contact = props => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         setSubmitted(true)
-        if( (values.email || values.phone) && values.name && values.company ){
+        if((values.email || values.phone) && values.name && values.company){
             setLoading(true)
             fetch("/", {
                 method: "POST",
@@ -43,7 +43,7 @@ const Contact = props => {
                 })
                 .catch(() => {
                     setLoading(false)
-                    setMessage("Unfortunately your message was unable to send at the moment.")
+                    setMessage("Your message was unable to send")
                 });
         }
     }

@@ -3,14 +3,23 @@
     width: 100vw;
     max-width: 100vw;
     position: relative;
-    font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
+    font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
     background: $background-color;
     z-index: -1;
-    @include mobile {
+    overflow: hidden;
+
+    @include xl-tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         height: 100%;
-        overflow: hidden;
+        padding: 3rem 0;
+    }
+
+    @include mobile {
         padding: 8% 0;
     }
+
     .about-text {
         position: absolute;
         top: 8%;
@@ -22,20 +31,41 @@
         flex-direction: column;
         justify-content: space-between;
         z-index: 1;
+
+        @include xl-tablet {
+            top: auto;
+            left: auto;
+            position: relative;
+            padding: 0;
+            width: 84%;
+            margin: 0 auto ;
+            height: auto;
+            margin-bottom: 5% ;
+        }
+
+
+
         @include mobile {
-            position: sticky;
-            top:0;
+            position: relative;
+            top: 0;
             left: 0;
             padding: 0 8%;
             width: 100%;
             height: 100%;
         }
+
         h2 {
             font-size: 3.2rem;
+
+            @include xl-tablet {
+                font-size:2.8rem;
+            }
+
             @include mobile {
                 font-size: 2rem;
                 width: 82%;
             }
+
             span {
                 color: $green;
             }
@@ -52,14 +82,36 @@
             margin: auto 0;
             margin-top: 3%;
             padding: 2% 0;
+
+            @include xl-tablet {
+                height: auto;
+                font-size:1.4rem;
+                line-height: 1.7;
+                margin-top: 0;
+            }
+
             @include mobile {
-                font-size:1.2rem;
+                font-size: 1.2rem;
                 line-height: 1.5;
             }
+
             p {
                 margin: auto 0;
                 height: 33%;
+
+                @include xl-tablet {
+                    font-size:1.5rem;
+                    height: auto;
+                    padding: 2rem 0 0 0;
+                }
+
+                @include tablet {
+                    font-size:1.4rem;
+                }
+
                 @include mobile {
+                    font-size:1.2rem;
+                    padding: 0;
                     width: 80%;
                     margin: 5% 0;
                 }
@@ -80,26 +132,42 @@
         z-index: 1;
         border: 2px solid $green;
 
-        @include mobile{
+        @include xl-tablet {
+            position: relative;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            width: 84%;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        @include mobile {
             left: 8%;
             width: 82%;
             height: 100%;
             position: sticky;
-
         }
+
         h3 {
             width: 100%;
             background: $green;
             color: $background-color;
             height: 10%;
-            padding: .3rem 0;
+            padding: 0.3rem 0;
             font-size: 1.6rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 900;
-            @include mobile{
-                font-size:1.4rem;
+
+            @include xl-tablet{
+                padding: 1.5rem 0;
+            }
+
+            @include mobile {
+                font-size: 1.4rem;
                 text-align: center;
                 line-height: 1.25;
             }
@@ -107,26 +175,40 @@
 
         ul {
             height: 90%;
-            background: rgba($background-color, .5);
+            background: rgba($background-color, 0.5);
             display: flex;
             justify-content: space-evenly;
-            @include mobile{
+
+            @include mobile {
                 height: 100%;
             }
+
             .li-container {
                 width: 45%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-                @include mobile{
+
+                @include mobile {
                     padding: 5% 0;
                 }
+
                 li {
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-align: center;
-                    @include mobile{
+                    
+                    @include xl-tablet {
+                        font-size: 1.7rem;
+                        padding: 2rem 0;
+                    }
+
+                    @include tablet{
+                        padding: 1.2rem 0;
+                    }
+
+                    @include mobile {
                         font-size: 1.2rem;
                         padding: 13% 0;
                     }
