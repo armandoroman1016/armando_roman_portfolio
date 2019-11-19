@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
     <NavBar width = {width}/>
-      { width > 768 ?
+      { width > 1400 ?
         <div>
           <Route render= {({location}) => (
             <TransitionGroup>

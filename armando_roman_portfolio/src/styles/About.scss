@@ -8,7 +8,7 @@
     z-index: -1;
     overflow: hidden;
 
-    @include tablet {
+    @include xl-tablet {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -32,7 +32,7 @@
         justify-content: space-between;
         z-index: 1;
 
-        @include tablet {
+        @include xl-tablet {
             top: auto;
             left: auto;
             position: relative;
@@ -54,7 +54,7 @@
         h2 {
             font-size: 3.2rem;
 
-            @include tablet {
+            @include xl-tablet {
                 font-size:2.8rem;
             }
 
@@ -80,7 +80,7 @@
             margin-top: 3%;
             padding: 2% 0;
 
-            @include tablet {
+            @include xl-tablet {
                 height: auto;
                 font-size:1.4rem;
                 line-height: 1.7;
@@ -96,7 +96,7 @@
                 margin: auto 0;
                 height: 33%;
 
-                @include tablet {
+                @include xl-tablet {
                     height: auto;
                     padding: 2rem 0 0 0;
                 }
@@ -124,7 +124,7 @@
         z-index: 1;
         border: 2px solid $green;
 
-        @include tablet {
+        @include xl-tablet {
             position: relative;
             left: auto;
             top: auto;

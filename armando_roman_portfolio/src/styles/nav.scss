@@ -16,7 +16,7 @@
         top: 100%;
     }
 
-    @include tablet {
+    @include xl-tablet {
         height: 10vh;
         width: 100vw;
         left: 0;
@@ -33,7 +33,7 @@
         font-size: 1.6rem;
         list-style: none;
 
-        @include tablet {
+        @include xl-tablet {
             flex-direction: row;   
         }
 

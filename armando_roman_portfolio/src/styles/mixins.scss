@@ -5,3 +5,7 @@
 @mixin tablet {
     @media(max-width: 768px) {@content; }
 }
+
+@mixin xl-tablet {
+    @media(max-width: 1400px) {@content; }
+}
