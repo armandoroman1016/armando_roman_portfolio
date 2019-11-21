@@ -4,10 +4,9 @@ import { NavLink } from 'react-router-dom'
 const NavBar = props => {
 
     const { width } = props
-    console.log(width)
+    
     return (
         <div className = 'nav-bar'  >
-        { width > 501 ? 
             <ul className = 'nav-links'>
                 <li className = 'nav-item' >
                     <NavLink to = '/' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
@@ -30,8 +29,6 @@ const NavBar = props => {
                 }}>Contact</NavLink>
             </li>
             </ul>
-            : null
-        }
         </div>
     )
 
