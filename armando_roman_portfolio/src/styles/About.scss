@@ -174,7 +174,7 @@
         }
 
         ul {
-            height: 90%;
+            height: 100%;
             background: rgba($background-color, 0.5);
             display: flex;
             justify-content: space-evenly;
@@ -184,12 +184,12 @@
             }
 
             .li-container {
-                width: 45%;
+                width: 50%;
                 height: 100%;
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
                 justify-content: space-evenly;
-
+                align-items: center;
                 @include mobile {
                     padding: 5% 0;
                 }
@@ -198,7 +198,8 @@
                     font-size: 1.4rem;
                     font-weight: 600;
                     text-align: center;
-                    
+                    width: 100%;
+
                     @include xl-tablet {
                         font-size: 1.7rem;
                         padding: 2rem 0;
