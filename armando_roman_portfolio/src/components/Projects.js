@@ -5,7 +5,7 @@ import Project from './Project'
 const Projects = props => {
 
     return(
-        <section className = 'projects-section page'>
+        <section className = 'projects-section page' id = "projects-container">
         <div className = 'projects-container'>
         <h1>The Work</h1>
             {projects.map( project => {

@@ -38,9 +38,9 @@
             position: relative;
             padding: 0;
             width: 84%;
-            margin: 0 auto ;
+            margin: 0 auto;
             height: auto;
-            margin-bottom: 5% ;
+            margin-bottom: 5%;
         }
 
 
@@ -58,7 +58,7 @@
             font-size: 3.2rem;
 
             @include xl-tablet {
-                font-size:2.8rem;
+                font-size: 2.8rem;
             }
 
             @include mobile {
@@ -85,7 +85,7 @@
 
             @include xl-tablet {
                 height: auto;
-                font-size:1.4rem;
+                font-size: 1.4rem;
                 line-height: 1.7;
                 margin-top: 0;
             }
@@ -100,17 +100,17 @@
                 height: 33%;
 
                 @include xl-tablet {
-                    font-size:1.5rem;
+                    font-size: 1.5rem;
                     height: auto;
                     padding: 2rem 0 0 0;
                 }
 
                 @include tablet {
-                    font-size:1.4rem;
+                    font-size: 1.4rem;
                 }
 
                 @include mobile {
-                    font-size:1.2rem;
+                    font-size: 1.2rem;
                     padding: 0;
                     width: 80%;
                     margin: 5% 0;
@@ -162,7 +162,7 @@
             justify-content: center;
             font-weight: 900;
 
-            @include xl-tablet{
+            @include xl-tablet {
                 padding: 1.5rem 0;
             }
 
@@ -190,6 +190,7 @@
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 align-items: center;
+
                 @include mobile {
                     padding: 5% 0;
                 }
@@ -205,7 +206,7 @@
                         padding: 2rem 0;
                     }
 
-                    @include tablet{
+                    @include tablet {
                         padding: 1.2rem 0;
                     }
 

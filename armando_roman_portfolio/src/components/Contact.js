@@ -121,7 +121,7 @@ const Contact = () => {
     //? end animations ^
 
     return(
-        <div className = 'contact-container page' style = {{backgroundSize:'cover'}}>
+        <div className = 'contact-container page' style = {{backgroundSize:'cover'}} id = "contact-container">
             <div className = 'circle-one hide' ref = {element => {bubbleOne = element}}/>
             <div className = 'circle-two hide' ref = {element => {bubbleTwo = element}}/>
             <div className = 'circle-three hide' ref = {element => {bubbleThree = element}}/>
