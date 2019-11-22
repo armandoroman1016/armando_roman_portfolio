@@ -30,6 +30,10 @@
 
     img{
         height: 13%;
+
+        @include xl-tablet{
+            display: none;
+        }
     }
 
     .nav-links {
@@ -43,6 +47,8 @@
         list-style: none;
 
         @include xl-tablet {
+            height: 100%;
+            width: 100%;
             flex-direction: row; 
             font-size:1.2rem  
         }
@@ -76,6 +82,11 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        
+        @include xl-tablet{
+            display: none;
+        }
+
         img{
             height: 100%;
         }

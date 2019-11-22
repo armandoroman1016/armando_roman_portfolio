@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import logo from '../assests/images/logo.svg'
 import linked from '../assests/images/linked.svg'
 import github from '../assests/images/github.svg'
-
 const NavBar = props => {
 
     console.log(logo)
