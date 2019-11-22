@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assests/images/logo.svg'
 
 const NavBar = props => {
+
+    console.log(logo)
 
     const { width } = props
     
     return (
         <div className = 'nav-bar'  >
-            <ul className = 'nav-links'>
+        <img src = {logo} />
+        <ul className = 'nav-links'>
                 <li className = 'nav-item' >
                     <NavLink to = '/' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
                         color:'#ffffff'
