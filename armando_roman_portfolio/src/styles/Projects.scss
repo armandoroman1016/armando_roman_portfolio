@@ -1,10 +1,11 @@
 .projects-section {
     overflow: hidden;
     background: $background-color;
-    min-height: 100vh;
+    // min-height: 100vh;
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
     max-width: 100vw;
-
+    // height:100%;
+    
     @include xl-tablet {
         min-height: 0;
     }
@@ -38,15 +39,14 @@
 
         h1 {
             color: $font-color;
-            text-decoration-line: underline;
-            font-size: 3.6rem;
+            font-size: 2.6rem;
             text-align: left;
 
 
             @include mobile {
-                font-size: 2.4rem;
+                font-size: 1.8rem;
                 margin-left: 8%;
-                text-decoration-line: underline;
+                text-decoration-line: none;
                 margin-bottom: 4%;
             }
         }
@@ -57,38 +57,39 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            margin: 50px 0;
+            // margin: rem 0;
             color: $font-color;
 
             @include xl-tablet {
-                padding: 4rem 0;
+                padding: 3rem 0;
                 margin: 0;
                 width: 100%;
                 position: relative;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
 
             @include mobile {
-                padding: 0;
-                margin: 0;
-                margin: 3% 0 0 8%;
+                padding: 1rem 0;
+                margin: 0 0 0 8%;
                 justify-content: space-between;
             }
 
             .project-header {
-                font-size: 2.6rem;
+                font-size: 1.8rem;
                 width: 90%;
                 z-index: 1;
 
                 @include xl-tablet {
-                    font-size:2rem;
                     margin-bottom: 5%;
                     font-weight: 800;
+                    width: 100%;
                 }
 
                 @include mobile {
                     margin-bottom: 0;
                     font-weight: 0;
-                    font-size: 1.6rem;
+                    font-size: 1.2rem;
                 }
             }
 
@@ -98,9 +99,12 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
+                padding: 2rem 0;
+
 
                 @include xl-tablet {
                     flex-wrap: wrap;
+                    justify-content: space-around;
                 }
 
                 @include mobile {
@@ -113,51 +117,54 @@
                 img {
                     width: 35%;
                     height: auto;
-                    margin-top: -10%;
+                    
                     z-index: 0;
                     filter: drop-shadow(0px 5px 3px black);
 
                     @include xl-tablet {
                         margin: 0;
-                        margin-top: 4%;
+                        padding: 5% 0 0 0;
                         width: 40%;
                     }
 
                     @include mobile {
                         margin: 0;
-                        width: 100%;
+                        padding: 10% 0;
+                        width: 70%;
                     }
                 }
 
-                .mobile-mock {
-                    transform: translateY(8%);
-
-                    @include xl-tablet {
-                        transform: translateY(0);
-                    }
-
-                    @include mobile {
-                        transform: translateY(0);
-                        width: 80%;
-                        margin-top: 3%;
-                    }
-                }
 
                 .project-description {
-                    font-size: 1.6rem;
-                    line-height: 1.5;
+                    font-size: 1.3rem;
+                    line-height: 1.75;
                     width: 60%;
                     color: $font-color;
-
+                    
                     @include xl-tablet {
                         width: 100%;
                     }
 
                     @include mobile {
                         width: 100%;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                     }
                 }
+            }
+
+            
+            .mobile-mock {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                margin-top: -8%;
+                .project-description{
+                    margin-top: 5%;
+                }
+                @include xl-tablet {
+                    margin-top: 0;
+                }
+
             }
 
             .project-links {
@@ -165,7 +172,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 6%;
+                margin-top: 2%;
 
                 @include xl-tablet {
                     flex-direction: column;
@@ -173,9 +180,9 @@
                     width: 40%;
                     align-items: flex-start;
                     justify-content: space-between;
-                    position: absolute;
-                    bottom: 15%;
-                    right: 10%;
+                    // position: absolute;
+                    // bottom: 20%;
+                    // right: 10%;
                 }
 
                 @include mobile {
@@ -190,12 +197,16 @@
                 .project-link {
                     margin: 0 0 20px 20px;
 
+                    @include xl-tablet{
+                        margin: 5% 0;
+                    }
+
                     @include mobile {
                         margin: 2% 2%;
                     }
 
                     a {
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                         text-decoration: none;
                         width: 100%;
                         color: $font-color;
@@ -204,7 +215,7 @@
 
                         @include mobile {
                             width: 100%;
-                            font-size: 1rem;
+                            font-size: .8rem;
                         }
                     }
 

@@ -4,21 +4,27 @@ import logo from '../assests/images/logo.svg'
 
 const MobileNav = () => {
 
+  // boolean to check if users is scrolling or recently scrolled
   const [ scrolled, setScrolled ] = useState(false)
 
+  //default value of null updates value on scroll event if enough time has passed
   const [ lastScroll, setLastScroll ] = useState(null)
 
+  // checks if page position is on top
   const [ top, setTop ] = useState(true)
 
   const handleScroll  = () => {
 
+    // storing value for use in multiple areas of function
     const time = Date.now()
 
     let timePassed
 
+    //if lastScroll is a valid time 
     if(lastScroll){
        timePassed = time - lastScroll
 
+    //if last scroll is falsy i.e null
     }else{
         timePassed = time 
     }
@@ -27,18 +33,20 @@ const MobileNav = () => {
       
       //boolean on whether user is at top position
       const onTop = window.scrollY < 100;
-      // if user is on top 
 
+      // checking if user is on top
       if(onTop){
         setTop(true)
       }else if( !onTop ){
         setTop(false)
       }
 
+      //if 2 seconds have passed since last scroll update new time and set scrolling to true 
       if(timePassed >= 2000){
         setLastScroll(time)
         setScrolled(true)   
         
+        // if under 2 seconds from last scroll set scroll to true DONT update time
       }else if(timePassed < 2000){
         setScrolled(true)
 
