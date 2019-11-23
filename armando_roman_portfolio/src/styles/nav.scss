@@ -13,13 +13,14 @@
     justify-content: space-around;
 
     @include xl-tablet {
+        flex-direction: row;
         height: 7vh;
         width: 100vw;
         left: 0;
         right: 0;
         margin-bottom: 40px;
         background: $background-color;
-        transition: .33s;
+        transition: .4s;
     }
     
     @include mobile {
@@ -34,8 +35,13 @@
         height: 13%;
 
         @include xl-tablet{
-            display: none;
+            height: 70%;
         }
+
+        @include mobile{
+            height: 60%;
+        }
+
     }
 
     .nav-links {
@@ -50,9 +56,9 @@
 
         @include xl-tablet {
             height: 100%;
-            width: 100%;
-            flex-direction: row; 
-            font-size:1.2rem  
+            width: 70%;
+            flex-direction: row;  
+            // border: 2px solid red; 
         }
 
         :hover {
@@ -60,7 +66,7 @@
         }
 
         @include mobile {
-            width: 100%;
+            width: 75%;
             height: 100%;
             flex-direction: row;
             font-size: 1rem;
