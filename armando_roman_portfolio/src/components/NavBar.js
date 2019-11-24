@@ -5,8 +5,6 @@ import linked from '../assests/images/linked.svg'
 import github from '../assests/images/github.svg'
 const NavBar = props => {
 
-    console.log(logo)
-
     const { width } = props
     
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import computer from '../assests/images/computer.png'
-import github from '../assests/images/github.png'
+import computer from '../assests/images/computer.svg'
+import github from '../assests/images/github.svg'
 import VisibilitySensor from "react-visibility-sensor";
 import { Spring, config } from 'react-spring/renderprops'
 import useWindowSize from '../hooks/WindowSize'
