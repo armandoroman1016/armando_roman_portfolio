@@ -45,7 +45,7 @@ const LandingPage = props => {
     // },[])
 
     return(
-        <div className = 'landing-container' id = 'landing-container'>
+        <div className = 'landing-container page' id = 'landing-container'>
             <div className = 'web-dev-container'>
                 <div className = 'web'>
                     <p className = 'opening-tags'>{`<html>`}</p>
