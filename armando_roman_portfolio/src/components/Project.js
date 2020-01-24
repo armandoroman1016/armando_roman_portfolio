@@ -13,9 +13,9 @@ const Project = props => {
 
     const { height, width } = useWindowSize()
 
-    if (project.hasMobileMock) {
-        className = 'mobile-mock'
-    }
+    // if (project.hasMobileMock) {
+    //     className = 'mobile-mock'
+    // }
 
     return (
         <>
@@ -35,8 +35,22 @@ const Project = props => {
                                 style={props}>
                                 <h2 className='project-header'>{project.projectName}</h2>
                                 <div className={`img-description ${className}`}>
-                                    <p className='project-description'>{project.projectDescription}</p>
-                                    <img src={project.projectImg} className={`project-img`} alt='project-snapshot' />
+                                    <div className = 'description-container'>
+                                        <p className='project-description'>{project.projectDescription}</p>
+                                        {project.backendGithub && <p className='meta'> Backend repo is <a href = {`${project.backendGithub}`}>here</a> .</p>}
+                                        {project.previousUrl && <p className='meta'>Previous version is <a href = {`${project.previousUrl}`}>here</a> .</p> }
+                                    </div>
+
+                                    {project.mobileMock && 
+                                        <img src = {project.mobileMock} 
+                                        className={ project.desktopMock ? `project-img mobile` :  `project-img mobile no-desktop`} 
+                                        alt='project-snapshot' /> }
+                                        
+                                        {project.desktopMock && 
+                                            <img src={project.desktopMock} 
+                                            className = { project.mobileMock ? 'project-img desktop' : 'project-img desktop no-mobile' } 
+                                            alt='project-snapshot' /> }
+
                                     { width < 1400 ? 
                                         <div className = 'tech_project-links'>
                                             <div className = 'tech-stack'>
@@ -47,7 +61,7 @@ const Project = props => {
                                                 }
                                                 </ul>
                                             </div>
-                                            <div className='project-links'>
+                                            <div className={`project-links`}>
                                                 <div className='project-link'>
                                                     <a href={project.githubUrl}><img src={github} alt='github icon' className='icon' />View The Code</a>
                                                 </div>
@@ -59,6 +73,7 @@ const Project = props => {
                                         : 
                                         null
                                     }
+
                                 </div>
                                 { width >= 1400 ? <div className = 'tech_project-links'>
                                 <div className = 'tech-stack'>
@@ -129,7 +144,7 @@ export default Project
 //                                 <h2 className='project-header'>{project.projectName}</h2>
 //                                 <div className={`img-description ${className}`}>
 //                                     <p className='project-description'>{project.projectDescription}</p>
-//                                     <img src={project.projectImg} className={`project-img`} alt='project-snapshot' />
+//                                     <img src={project.mobileMock} className={`project-img`} alt='project-snapshot' />
 //                                     { width < 1400 ? 
 //                                         <div className = 'tech_links'>
 //                                             <div className='project-links'>
