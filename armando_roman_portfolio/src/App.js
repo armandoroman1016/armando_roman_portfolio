@@ -2,7 +2,6 @@ import React from 'react';
 import useWindowSize from './hooks/WindowSize'
 import Desktop from './routing/Desktop'
 import Mobile from './routing/Mobile'
-import Footer from './components/Footer.js'
 
 function App() {
 
@@ -14,7 +13,7 @@ function App() {
         <Desktop />
         : <Mobile /> 
       }
-      {/* <Footer/> */}
+      
     </div>
   );
 }
