@@ -1,10 +1,12 @@
 .footer {
-   position: fixed;
    font-weight: bold;
    bottom: 1.6rem;
    right: 1.6rem;
    z-index: 100;
    color: $orange;
    font-size: .6rem;
-
+   
+   @include xl-tablet{
+      display: none;
+   }
 }
