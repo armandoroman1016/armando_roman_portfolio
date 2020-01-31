@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {Elastic, TimelineMax, Power4 } from 'gsap';
 import ClipLoader from 'react-spinners/ClipLoader';
+import Footer from '../components/Footer.js'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -182,6 +183,7 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -4,7 +4,7 @@ const Footer = () => {
 
     return(
         <div className = 'footer'>
-            <p>&copy; 2019 Armando Roman</p>
+            <p>&copy; 2020 Armando Roman</p>
         </div>
     )
 }

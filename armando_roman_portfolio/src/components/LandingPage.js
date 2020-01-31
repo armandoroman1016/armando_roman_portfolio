@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 // import {TweenMax, Linear, TimelineMax, Bounce, Back, Power4 } from 'gsap';
+import Footer from '../components/Footer.js'
 
 const LandingPage = props => {
 
@@ -63,6 +64,7 @@ const LandingPage = props => {
                 <p className = 'name'>I am<br/>Armando Roman<span>.</span></p>
                 <p className = 'role'>A Full Stack Web Developer</p>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -1,7 +1,8 @@
-import PartyPlanner from '../assests/images/party_planner_iphone.png'
 import celebratrMobile from '../assests/images/celebratrMobile.png'
 import celebratrMac from '../assests/images/celebratrMac.png' 
 import farmFresh from '../assests/images/farmFresh.png'
+import tacosMobile from '../assests/images/tacosMobile.png'
+import tacosMac from '../assests/images/tacosMac.png' 
 
 export const projects = [
     {
@@ -27,5 +28,17 @@ export const projects = [
         techStack: ['NodeJs', 'ExpressJs', 'PostgresQL', "Json Web Token", 'Knex'],
         projectUrl: 'https://farm-fresh-bw.herokuapp.com/docs/',
         githubUrl: 'https://github.com/armandoroman1016/farm_fresh_be'
+    },
+
+    {
+        id: 4,
+        hasMobileMock: true,
+        projectName: "Todo Los Tacos",
+        desktopMock: tacosMac,
+        mobileMock:  tacosMobile,
+        projectDescription: `Todo Los Tacos is a simple website that is written in HTML, CSS, and Vanilla Javascript.`,
+        techStack: ['HTML', 'CSS3', 'Javascript'],
+        projectUrl: 'https://todoslostacos.netlify.com/',
+        githubUrl: 'https://github.com/armandoroman1016/tacos_site'
     }
 ]
