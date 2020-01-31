@@ -57,8 +57,8 @@
 
         .project-container {
             width: 92%;
-            padding: 2rem 0;
-            height:30rem;
+            padding: 1rem 0;
+            height:100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -74,9 +74,13 @@
             }
 
             @include mobile {
+                height: 30%;
+                width: 90%;
                 padding: 1rem 0 2rem;
                 margin: 0 0 0 5%;
+                overflow: hidden;
                 justify-content: space-between;
+
             }
 
             .project-header {
@@ -89,7 +93,7 @@
                     font-weight: 800;
                     width: 100%;
                 }
-
+                // TODO
                 @include mobile {
                     margin-bottom: 0;
                     font-weight: 0;
@@ -104,7 +108,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                padding: 2rem 0;
+                padding: 1rem 0;
                 flex-wrap: wrap;
 
                 @include xl-tablet {
@@ -115,10 +119,10 @@
                 @include mobile {
                     flex-direction: column;
                     flex-wrap: nowrap;
-                    width: 90%;
-                    overflow: hidden;
+                    width: 100%;
                     margin-top: 3%;
                     height: 100%;
+
                 }
 
                 .project-img {
@@ -149,6 +153,7 @@
                         // padding: 10% 0;
                         height: 5rem;
                         width: auto;
+                        
                     }
                 }
 
@@ -163,8 +168,9 @@
 
                     @include mobile {
                         margin: 0;
-                        transform: translateX(-200%);
-                        padding: 10% 0;
+                        padding: 0;
+                        transform: translate(-200%, 50%), ;
+                        
                     }
 
                 }
@@ -181,8 +187,10 @@
                     
                     @include mobile {
                         margin: 0;
-                        transform: translate(30%, -70%);
+                        transform: translate(30%, -10%);
                         padding: 10% 0;
+                        
+                        
                     }
 
                 }
@@ -222,8 +230,12 @@
 
                     @include mobile {
                         line-height: 1.5;
-                        width: 100%;
+                        height: auto;
+                        width: 95%;
+                        margin: 0 auto;
                         font-size: 1rem;
+
+                        
                     }
                 }
 
@@ -252,13 +264,16 @@
 
                 .project-description {
                     margin-top: 5%;
-                    @include mobile{}
+                    @include mobile{
+                        
+                    }
                 }
 
                 @include xl-tablet {
                     margin-top: 0;
                 }
 
+                
             }
 
             .project-links {
@@ -279,6 +294,8 @@
                 @include mobile {
                     width: 100%;
                     align-items: flex-start;
+                    
+
                 }
 
                 .project-link {
