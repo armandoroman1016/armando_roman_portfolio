@@ -3,7 +3,7 @@ import celebratrMac from '../assests/images/celebratrMac.png'
 import farmFresh from '../assests/images/farmFresh.png'
 import tacosMobile from '../assests/images/tacosMobile.png'
 import tacosMac from '../assests/images/tacosMac.png' 
-
+import pycity from "../assests/images/pycity.jpg"
 export const projects = [
     {
         id: 2,
@@ -40,5 +40,17 @@ export const projects = [
         techStack: ['HTML', 'CSS3', 'Javascript'],
         projectUrl: 'https://todoslostacos.netlify.com/',
         githubUrl: 'https://github.com/armandoroman1016/tacos_site'
+    },
+
+    {
+        id: 5,
+        hasMobileMock: false,
+        projectName: "Py City",
+        desktopMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/2o0jde-pycity-netlify-com.png",
+        projectDescription: "PyCity is a Multi User Dungeon - MUD - game. It allows users to register and explore different areas of a procedurally generated map of buildings around a town. The players moves are updated in the DB and allows for encounter of other users across the map",
+        techStack: ["ReactJS", "Axios", "Python", "OOP"],
+        projectUrl: "https://pycity.netlify.com/register",
+        githubUrl: "https://github.com/cs26-bw"
+
     }
 ]
