@@ -3,7 +3,6 @@ import celebratrMac from '../assests/images/celebratrMac.png'
 import farmFresh from '../assests/images/farmFresh.png'
 import tacosMobile from '../assests/images/tacosMobile.png'
 import tacosMac from '../assests/images/tacosMac.png' 
-import pycity from "../assests/images/pycity.jpg"
 export const projects = [
     {
         id: 2,

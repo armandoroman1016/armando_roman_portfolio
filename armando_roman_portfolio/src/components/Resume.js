@@ -5,7 +5,7 @@ const Resume = () => {
 
     return(
         <div className = 'resume'>
-            <a href = 'https://indd.adobe.com/view/286484cc-e4b6-4a6a-bf8d-f92f731d1ab4'><img src = {resume} alt = 'an icon of a sheet of paper' /></a>
+            <a href = 'https://indd.adobe.com/view/cc956f79-3c2f-4ccf-925c-04142881d827'><img src = {resume} alt = 'an icon of a sheet of paper' /></a>
         </div>
     )
 }
