@@ -34,7 +34,7 @@ const About = () =>{
                         <li>SCSS</li>
                         <li>NodeJs</li>
                         <li>ExpressJs</li>
-                        <li>Relational Databases</li>
+                        <li>Relational DB's</li>
                     </div>
                 </ul>
             </div>

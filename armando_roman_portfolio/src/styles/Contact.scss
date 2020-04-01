@@ -1,7 +1,6 @@
 .contact-container {
     position: relative;
     height: 100vh;
-    width: 100vw;
     overflow: hidden;
     background: $background-color;
     font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
@@ -23,7 +22,6 @@
 
     .form-container {
         margin: 2% 5% auto 27%;
-        background-color: rgba(105, 105, 105, 0.1);
         width: 52%;
         height: 85%;
         padding: 0 3rem 3rem 3rem;
@@ -158,6 +156,7 @@
             .message {
                 display: flex;
                 flex-direction: column;
+                font-size: 1.3rem;
 
                 label {
                     @include xl-tablet {
@@ -174,7 +173,7 @@
                 textarea {
                     margin-top: 1rem;
                     width: 100%;
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                     line-height: 1.5;
                     padding: 0.5rem;
                     color: $background-color;
@@ -235,6 +234,7 @@
                 border-radius: 5px;
                 width: 22.5%;
                 height: 100%;
+                box-shadow: 2px 2px 5px rgba(lighten($background-color, 5%), .8);
 
                 @include xl-tablet {
                    padding: .5rem 0;
