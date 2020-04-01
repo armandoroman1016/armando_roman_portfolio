@@ -15,7 +15,6 @@ const Projects = props => {
                 )
             })}
         </div>
-            <Footer/>
         </section>
     )
 }

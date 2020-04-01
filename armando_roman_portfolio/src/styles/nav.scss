@@ -20,7 +20,8 @@
         right: 0;
         margin-bottom: 40px;
         background: $background-color;
-        transition: .4s;
+        transition: background .4s ease-in-out, height .4s ease-in-out;
+
     }
     
     @include mobile {
@@ -86,23 +87,38 @@
     }
     .social{
         height: 7%;
-        width: 85%;
+        width: 90%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        // border:2px solid red;
         
         @include xl-tablet{
             display: none;
         }
 
-        img{
-            height: 100%;
+        a{
+            width: 50%;
+            margin: auto 0;
+            padding: .5rem;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+
+
         }
+
     }
+
+
 
 }
 
 .scrolled{
     height: 10vh;
     background: #131313;
+    transition: background .4s ease-in-out, height .4s ease-in-out;
+
 }
