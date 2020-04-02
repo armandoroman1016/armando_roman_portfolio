@@ -48,7 +48,7 @@ const LandingPage = props => {
         <div className = 'landing-container page' id = 'landing-container'>
             <div className = 'web-dev-container'>
                 <div className = 'web'>
-                    <p className = 'opening-tags'>{`<html>`}</p>
+                    <p className = 'opening-tags'>{`<script>`}</p>
                     <p className = 'web-text'>
                         WEB
                         <span className = 'hello'>Hello<span className = 'period'>.</span></span>
@@ -56,7 +56,7 @@ const LandingPage = props => {
                 </div>
                 <div className = 'dev'>
                     <p className = 'dev-text'>DEV</p>
-                    <p className = 'closing-tags'>{`</html>`}</p>
+                    <p className = 'closing-tags'>{`</script>`}</p>
                 </div>            
             </div>
             <div className = 'name-container'>

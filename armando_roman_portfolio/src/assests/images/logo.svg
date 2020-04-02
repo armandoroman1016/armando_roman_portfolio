@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 522 523"><defs><style>.cls-1{opacity:0.65;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-7{fill:none;}.cls-2,.cls-7{stroke:#ff5252;}.cls-2,.cls-3,.cls-4,.cls-7{stroke-linecap:round;stroke-width:24px;}.cls-2,.cls-3{stroke-linejoin:bevel;}.cls-3,.cls-4{stroke:#0097a7;}.cls-4,.cls-5,.cls-7{stroke-miterlimit:10;}.cls-5{stroke:#038788;stroke-width:45px;}.cls-6{fill:#231f20;}
 
-.animate{
+body.darkmode .animate{
     transform-origin: 49% 49%;
     animation: rotateCircle 60s infinite linear;
 }
+
+
 
 @keyframes rotateCircle{
     from{
