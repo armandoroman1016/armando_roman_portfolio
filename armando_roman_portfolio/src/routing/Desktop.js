@@ -30,7 +30,7 @@ function Desktop() {
       <NavBar />
       <div 
       onClick={toggleMode}
-      style = {{position: "absolute", right: "0", top: "10%", color: "red", zIndex: "10000"}}
+      style = {{position: "absolute", right: "0", bottom: "5%", color: "red", zIndex: "10000"}}
       className={darkMode ? 'toggle toggled' : 'toggle'}
       >  PRESS ME </div>
       <div className = 'resume'>
