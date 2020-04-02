@@ -1,10 +1,9 @@
 .projects-section {
     overflow: hidden;
-    background: $background-color;
+    background: $font-color;
     min-height: 100vh;
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
     max-width: 100vw;
-    // height:100%;
     position: relative;
     @include xl-tablet {
         min-height: 0;
@@ -42,9 +41,10 @@
         }
 
         h1 {
-            color: $font-color;
+            color: $background-color;
             font-size: 2.6rem;
             text-align: left;
+            transition: color .25s ease-in;
 
 
             @include mobile {
@@ -62,8 +62,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            color: $font-color;
+            color: $background-color;
             position: relative;
+
+            transition: color .25s ease-in;
 
             @include xl-tablet {
                 padding: 3rem 0;
@@ -222,7 +224,8 @@
                     font-size: 1.3rem;
                     line-height: 1.75;
                     width: 60%;
-                    color: $font-color;
+                    color: $background-color;
+                    transition: color .25s ease-in;
 
                     @include xl-tablet {
                         width: 100%;
@@ -313,9 +316,10 @@
                         font-size: 1.2rem;
                         text-decoration: none;
                         width: 100%;
-                        color: $font-color;
+                        color: $background-color;
                         display: flex;
                         align-items: center;
+                        transition: color .25s ease-in;
 
                         @include mobile {
                             width: 100%;
@@ -398,4 +402,40 @@
         }
     }
 }
+}
+
+body.dark-mode .projects-section{
+    background: $background-color;
+    transition: background-color .25s ease-in;
+
+    .h1, .project-container{
+        color: $font-color;
+        transition: all .25s ease-in;
+    }
+
+    .project-container{
+        .img-description{
+            .project-description{
+                color: $font-color;
+                transition: color .25s ease-in;
+
+            }
+        }
+        .project-links{
+            .project-link{
+                a{
+                    color: $font-color;
+                    transition: color .25s ease-in;
+        
+                }
+            }
+            
+        }
+        
+    }
+
+    
+
+    
+    
 }

@@ -22,23 +22,23 @@ const NavBar = props => {
         <img src = {logo} ref = {logoDot} alt = 'logo'/>
         <ul className = 'nav-links'>
                 <li className = 'nav-item' >
-                    <NavLink to = '/' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
-                        color:'#ffffff'
+                    <NavLink to = '/' className = "nav-link" style = {{textDecoration: 'none'}}activeStyle = {{
+                        
                     }}>Home</NavLink>
                 </li>
                 <li className = 'nav-item' >
-                    <NavLink to ='/projects' className = "nav-link"  style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
-                        color:'#ffffff'
+                    <NavLink to ='/projects' className = "nav-link"  style = {{textDecoration: 'none'}}activeStyle = {{
+                        
                     }}>Projects</NavLink>
                 </li>
                 <li className = 'nav-item' >
-                    <NavLink to ='/about' className = "nav-link"  style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
-                        color:'#ffffff'
+                    <NavLink to ='/about' className = "nav-link"  style = {{textDecoration: 'none'}}activeStyle = {{
+                        
                     }}>About</NavLink>
                 </li>
                 <li className = 'nav-item' >
-                <NavLink to ='/contact' className = "nav-link" style = {{textDecoration: 'none', color: "white"}}activeStyle = {{
-                    color:'#ffffff'
+                <NavLink to ='/contact' className = "nav-link" style = {{textDecoration: 'none'}}activeStyle = {{
+                    
                 }}>Contact</NavLink>
             </li>
             </ul>
