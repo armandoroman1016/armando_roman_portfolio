@@ -1,12 +1,14 @@
 .footer {
-   font-weight: bold;
-   bottom: 1.6rem;
-   right: 1.6rem;
-   z-index: 100;
-   color: $orange;
-   font-size: .6rem;
    
-   @include xl-tablet{
-      display: none;
-   }
+   color : $background-color;
+   background: $font-color;
+   text-align: center;
+   font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
+   padding: 1.2rem 0;
+
+}
+
+body.dark-mode .footer{
+   background: $background-color;
+   color: $font-color;
 }

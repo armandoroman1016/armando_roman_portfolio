@@ -1,13 +1,11 @@
 
-
-
 .nav-bar {
     position: fixed;
     height: 100vh;
     width: 10%;
     left: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 1000001;
     background-color: darken($font-color, 15%);
     font-family: 'Montserrat', 'Merriweather', 'Times New Roman', Times, serif;
     display: flex;
@@ -24,18 +22,12 @@
         left: 0;
         right: 0;
         margin-bottom: 40px;
-        background: $background-color;
+        background-color: darken($font-color, 15%);
+        
         transition: background .4s ease-in-out, height .4s ease-in-out;
 
     }
-    
-    @include mobile {
-        // height: 10vh;
-        // width: 100vw;
-        // left: 0;
-        // right: 0;
-        // top: 100%;
-    }
+
 
     img{
         height: 13%;
@@ -70,6 +62,7 @@
             height: 100%;
             width: 70%;
             flex-direction: row;  
+            font-size: .6rem;
             // border: 2px solid red; 
         }
 
@@ -81,7 +74,6 @@
             width: 75%;
             height: 100%;
             flex-direction: row;
-            font-size: 1rem;
             margin: auto 0;
         }
 
@@ -129,14 +121,18 @@
 
 .scrolled{
     height: 10vh;
-    background: #131313;
+    background-color: darken($font-color, 15%);
     transition: background .4s ease-in-out, height .4s ease-in-out;
+    a{
+        font-size: .8rem;
 
+    }
 }
+
 
 body.dark-mode .nav-bar{
     background-color: #131313;
-    transition: background-color .25s ease-in;
+    transition: all .25s ease-in;
 
     .nav-links a{
         color: $font-color;

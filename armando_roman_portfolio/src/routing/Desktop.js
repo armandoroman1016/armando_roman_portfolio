@@ -8,6 +8,7 @@ import Contact from '../components/Contact'
 import About from '../components/About'
 import NavBar from '../components/NavBar'
 import MobileNav from '../components/MobileNav'
+import Footer from '../components/Footer'
 
 import resume from '../assests/images/resume.svg'
 import sun from '../assests/images/sun.svg'
@@ -54,6 +55,7 @@ function Desktop() {
               <Projects />
               <About />     
               <Contact />
+              <Footer />
       </div>
     );
   }
