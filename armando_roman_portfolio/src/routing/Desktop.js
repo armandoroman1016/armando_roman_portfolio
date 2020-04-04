@@ -7,6 +7,8 @@ import Contact from '../components/Contact'
 import About from '../components/About'
 import NavBar from '../components/NavBar'
 import resume from '../assests/images/resume.svg'
+import sun from '../assests/images/sun.svg'
+import moon from '../assests/images/moon.svg'
 
 function Desktop() {
 
@@ -30,9 +32,12 @@ function Desktop() {
       <NavBar />
       <div 
       onClick={toggleMode}
-      style = {{position: "absolute", right: "0", bottom: "5%", color: "red", zIndex: "10000"}}
-      className={darkMode ? 'toggle toggled' : 'toggle'}
-      >  PRESS ME </div>
+      style = {{ color: "red", zIndex: "10000"}}
+      className={darkMode ? 'dark on' : 'dark off'}
+      >
+      {!darkMode && <img src = {sun} alt = 'illustration of the sun'/>}
+      {darkMode && <img src = {moon} alt = 'illustration of the moon'/>}
+      </div>
       <div className = 'resume'>
         <a href = 'https://indd.adobe.com/view/286484cc-e4b6-4a6a-bf8d-f92f731d1ab4'>
           <img src = {resume} alt = 'an icon of a sheet of paper' />
