@@ -8,23 +8,8 @@
 @import './Contact.scss';
 @import './About.scss';
 @import './Footer.scss';
+@import './Desktop.scss'
 
 
-.desktop{
-    position: relative;
-    height:100%;
-    width: 100%;
-    .resume{
-        z-index: 1;
-        position: absolute;
-        right:2rem;
-        top: 2rem;
-        img{
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-    }
-
-}
 
 

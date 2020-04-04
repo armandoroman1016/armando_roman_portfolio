@@ -1,17 +1,17 @@
 .contact-container {
     position: relative;
-    height: 100vh;
     overflow: hidden;
-    background: $background-color;
+    background: $font-color;
     font-family: "Montserrat", "Merriweather", "Times New Roman", Times, serif;
-    z-index: -2;
+    z-index: 1;
     max-width: 100vw;
+    transition: background .25s ease-in;
 
     @include xl-tablet {
         width: 100%;
         height: 100%;
         padding: 4% 0;
-        z-index: 10000;
+        z-index: 1000;
     }
 
     @include mobile {
@@ -29,7 +29,7 @@
         z-index: 100;
 
         @include xl-tablet {
-            background-color: rgba(lighten($background-color, 10%), 1);
+            // background-color: rgba(lighten($background-color, 10%), 1);
             padding: 0;
             margin: 0 auto;
             width: 90%;
@@ -43,7 +43,7 @@
         h2 {
             margin: 0;
             padding-top: 1rem;
-            color: $font-color;
+            color: $background-color;
             text-align: center;
             font-size: 3rem;
             height: 10%;
@@ -62,7 +62,7 @@
         }
 
         #contact_form {
-            height: 90%;
+            height: 42rem;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -103,21 +103,20 @@
 
                 input {
                     width: 100%;
-                    height: 55%;
+                    height: 65%;
                     margin: 1rem 0;
-                    font-size: 1.3rem;
-                    color: $background-color;
+                    font-size: 1.2rem;
+                    color: $landing-font-background;
                     letter-spacing: 1px;
                     border: none;
                     fill: solid;
-                    background: $font-color;
+                    background: lighten($light-grey, 45%);
                     border-radius: 5px;
                     font-family: "Montserrat", "Merriweather", "Times New Roman", Times,
                         serif;
-
+                    padding-left: .6rem;
                     &::placeholder {
                         font-size: 1rem;
-                        color: darken($font-color, 50%);
                     }
 
                     @include mobile {
@@ -131,9 +130,10 @@
                 }
 
                 label {
-                    font-size: 1.4rem;
-                    color: $font-color;
+                    font-size: 1.1rem;
+                    color: $landing-font-background;
                     display: flex;
+                    font-weight: bold;
                     justify-content: space-between;
 
                     @include xl-tablet {
@@ -157,6 +157,7 @@
                 display: flex;
                 flex-direction: column;
                 font-size: 1.3rem;
+                width: 99%;
 
                 label {
                     @include xl-tablet {
@@ -173,14 +174,14 @@
                 textarea {
                     margin-top: 1rem;
                     width: 100%;
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     line-height: 1.5;
-                    padding: 0.5rem;
+                    padding: 0.6rem;
                     color: $background-color;
                     letter-spacing: 1px;
                     border: none;
                     fill: solid;
-                    background: $font-color;
+                    background: lighten($light-grey, 45%);
                     border-radius: 5px;
                     font-family: "Montserrat", "Merriweather", "Times New Roman", Times,
                         serif;
@@ -191,7 +192,7 @@
                         padding: 0;
                         letter-spacing: 0;
                         border-radius: 2.5px;
-                        width: 94%;
+                        width: 96%;
                         margin: 0 auto;
                     }
 
@@ -213,7 +214,6 @@
             @include xl-tablet {
                 width: 94%;
                 margin: 5% auto;
-                height: 100%;
             }
 
             @include mobile {
@@ -276,12 +276,12 @@
     height: 250px;
     width: 250px;
     background: $light-grey;
-    background: linear-gradient(220deg, $green 0%, $background-color 100%);
+    background: linear-gradient(220deg, $green 0%, $font-color 100%);
     border-radius: 50%;
     position: absolute;
     top: 4rem;
     left: 14rem;
-    position: fixed;
+    position: absolute;
     z-index: -1;
 }
 
@@ -289,19 +289,20 @@
     height: 175px;
     width: 175px;
     background: $light-grey;
-    background: linear-gradient(220deg, $orange 0%, $background-color 100%);
+    background: linear-gradient(220deg, $orange 0%, $font-color 100%);
     border-radius: 50%;
     position: absolute;
     top: 22rem;
     left: 25rem;
     z-index: -1;
+    transform: rotateZ(90deg);
 }
 
 .circle-three {
     height: 222px;
     width: 222px;
     background: $light-grey;
-    background: linear-gradient(220deg, $green 0%, $background-color 100%);
+    background: linear-gradient(220deg, $green 0%, $font-color 100%);
     border-radius: 50%;
     position: absolute;
     z-index: -1;
@@ -312,7 +313,49 @@
 .circle-one,
 .circle-two,
 .circle-three {
+    transition: background .25s ease-in;
     @include xl-tablet {
         display: none;
     }
+}
+
+body.dark-mode .contact-container{
+    background: $background-color;
+    transition: background .25s ease-in;
+    
+    h2{
+        color: $font-color;
+        transition: color .25s ease-in;
+
+    }
+
+    #contact_form{
+
+        .input-container{
+            label{
+                color: $font-color;
+                transition: color .25s ease-in;
+
+            }
+            input, textarea{
+                background: $font-color;
+                transition: background .25s ease-in;
+
+            }
+
+        }
+
+    }
+
+    .circle-one,
+    .circle-three {
+        background: linear-gradient(220deg, $green 0%, $background-color 100%);
+        transition: background .25s ease-in;
+    }
+
+    .circle-two{
+        background: linear-gradient(220deg, $orange 0%, $background-color 100%);
+        transition: background .25s ease-in;
+    }
+
 }

@@ -1,0 +1,96 @@
+.desktop{
+    position: relative;
+    height:100%;
+    width: 100%;
+    .resume{
+        z-index: 10000;
+        position: fixed;
+        right:2rem;
+        top: 2rem;
+        @include xl-tablet{
+            top: 12vh;
+            right: 4%
+        }
+        @include mobile{
+            
+            left: 1rem;
+        }
+        img{
+            width: 2.5rem;
+            height: 2.5rem;
+            filter: drop-shadow(2px 2px 2px $light-grey);
+            @include xl-tablet{
+                width: 3rem;
+                height: 3rem;
+                padding: 8px;
+                border-radius: 50%;
+                background: rgba($font-color, 1);
+            }
+            @include tablet{
+                width: 2.2rem;
+                height: 2.2rem
+            }
+
+            @include mobile{
+                width: 1.4rem;
+                height: 1.4rem;
+                
+            }
+        }
+
+    }
+
+    .dark{
+        z-index: 10001;
+        position: fixed;
+        left: 12%;
+        top: 2rem;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+        
+        @include xl-tablet{
+            top: 20vh;
+            left: 90%;
+            
+        }
+
+        @include tablet{
+            left: 89.5%;
+        }
+
+        @include mobile{
+            top: 12vh;
+            left: 87%;
+        }
+        img{
+            height: 100%;
+            filter: drop-shadow(1px 1px 5px $light-grey);
+
+            @include xl-tablet{
+                padding: 8px;
+                border-radius: 50%;
+                background: rgba($font-color, 1);
+            }
+
+            @include tablet{
+                width: 2.2rem;
+                height: 2.2rem
+            }
+
+            @include mobile{
+                width: 1.4rem;
+                height: 1.4rem;
+                
+            }
+        }
+
+    }
+    .dark.off img, .resume.off img{
+        background: $background-color;
+        filter: drop-shadow(1px 1px 5px darken($light-grey, 20%));
+
+    }
+
+
+}

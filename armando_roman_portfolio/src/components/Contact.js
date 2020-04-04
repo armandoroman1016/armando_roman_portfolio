@@ -132,14 +132,14 @@ const Contact = () => {
                     <div className = 'input-container'>
                         <div className = 'name'>
                             <label>
-                                Name
+                                NAME
                                 { submitted && !values.name ? <p>*Required</p> : null}
                             </label>
                             <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} placeholder = 'Name'/>
                         </div>
                         <div className = 'phone'>
                             <label>
-                                Phone
+                                PHONE
                                 { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
                             </label>
                             <input type = 'text' name = 'phone' value = {values.phone} placeholder = 'Phone' onChange={handleChange}/>
@@ -148,7 +148,7 @@ const Contact = () => {
                     <div className = 'input-container'>
                         <div className = 'email'>
                             <label>
-                                Email
+                                EMAIL
                                 { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
                             </label>
                             <input type = 'text' name = 'email' value = {values.email} placeholder = 'Email' onChange={handleChange} />
@@ -156,14 +156,14 @@ const Contact = () => {
                         </div>
                         <div className = 'company'>
                             <label>
-                                Company
+                                COMPANY
                                 { submitted && !values.company ? <p>*Required</p> : null}
                             </label>
                             <input type = 'text' name = 'company' value = {values.company} placeholder = 'Company Name' onChange={handleChange}/>
                         </div>
                     </div>
                     <div className = 'input-container message'>
-                        <label>Message</label>
+                        <label>MESSAGE</label>
                         <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
                     </div>
                     <div className = 'button_message'>
