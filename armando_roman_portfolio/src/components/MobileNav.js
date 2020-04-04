@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, animateScroll } from "react-scroll";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import logo from '../assests/images/logo.svg'
 
 const MobileNav = () => {
@@ -82,20 +82,8 @@ const MobileNav = () => {
 
   return (
     <div className={!scrolled || top ? 'nav-bar scrolled' : `nav-bar`}>
-    <img src = {logo} />
+    <img src = {logo} alt = 'personal logo'/>
       <ul className="nav-links">
-        <li className="nav-item">
-          <Link
-            className="nav-link"
-            to="landing-container"
-            spy={true}
-            smooth={true}
-            offset={-60}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
         <li className="nav-item">
           <Link
             className="nav-link"

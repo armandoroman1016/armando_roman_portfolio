@@ -29,6 +29,7 @@ const About = () =>{
                         <li>CSS</li>
                         <li>Javascript</li>
                         <li>ReactJs</li>
+                        <li>Python</li>
                     </div>
                     <div className = 'li-container'>
                         <li>SCSS</li>
