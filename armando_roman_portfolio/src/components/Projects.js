@@ -1,7 +1,6 @@
 import React from 'react'
 import { projects } from '../data/projects'
 import Project from './Project'
-import Footer from '../components/Footer.js'
 
 const Projects = props => {
 

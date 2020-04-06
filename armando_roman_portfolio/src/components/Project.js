@@ -13,10 +13,6 @@ const Project = props => {
 
     const { height, width } = useWindowSize()
 
-    // if (project.hasMobileMock) {
-    //     className = 'mobile-mock'
-    // }
-
     return (
         <>
             <VisibilitySensor partialVisibility>

@@ -414,12 +414,13 @@ body.dark-mode .projects-section{
     background: $background-color;
     transition: background-color .25s ease-in;
 
-    .h1, .project-container{
+    h1, .project-container{
         color: $font-color;
-        transition: all .25s ease-in;
+        transition: color .25s ease-in;
     }
 
     .project-container{
+
         .img-description{
             .project-description{
                 color: $font-color;
@@ -427,6 +428,7 @@ body.dark-mode .projects-section{
 
             }
         }
+
         .project-links{
             .project-link{
                 a{
@@ -439,9 +441,4 @@ body.dark-mode .projects-section{
         }
         
     }
-
-    
-
-    
-    
 }

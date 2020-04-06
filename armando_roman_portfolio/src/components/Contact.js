@@ -25,6 +25,7 @@ const Contact = () => {
     const [ submitted, setSubmitted ] = useState(false)
 
     const handleChange = (e) =>{
+        console.log(e.target.selectionEnd)
         setValues({...values, [e.target.name]: e.target.value})
     }
 
@@ -121,6 +122,8 @@ const Contact = () => {
 
     //? end animations ^
 
+
+
     return(
         <div className = 'contact-container page' style = {{backgroundSize:'cover'}} id = "contact-container">
             <div className = 'circle-one hide' ref = {element => {bubbleOne = element}}/>
@@ -135,14 +138,29 @@ const Contact = () => {
                                 NAME
                                 { submitted && !values.name ? <p>*Required</p> : null}
                             </label>
-                            <input type = 'text' name = 'name' value = {values.name} onChange={handleChange} placeholder = 'Name'/>
+                            <input 
+                            type = 'text' 
+                            name = 'name' 
+                            value = {values.name} 
+                            onChange={handleChange} 
+                            placeholder = 'Name'
+                            style = {{border: submitted && !values.name  ? "1.4px solid #ff5252": "none"}}
+
+                            />
                         </div>
                         <div className = 'phone'>
                             <label>
                                 PHONE
                                 { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
                             </label>
-                            <input type = 'text' name = 'phone' value = {values.phone} placeholder = 'Phone' onChange={handleChange}/>
+                            <input 
+                            type = 'tel' 
+                            name = 'phone' 
+                            value = {values.phone} 
+                            placeholder = 'Phone' 
+                            onChange={handleChange}
+                            style = {{border: submitted && (!values.phone && !values.email) ? "1.4px solid #ff5252": "none"}}
+                            />
                         </div>
                     </div>
                     <div className = 'input-container'>
@@ -151,7 +169,14 @@ const Contact = () => {
                                 EMAIL
                                 { submitted && (!values.phone && !values.email) ? <p>*Phone or Email Required</p> : null}
                             </label>
-                            <input type = 'text' name = 'email' value = {values.email} placeholder = 'Email' onChange={handleChange} />
+                            <input 
+                            type = 'text' 
+                            name = 'email' 
+                            value = {values.email} 
+                            placeholder = 'Email' 
+                            onChange={handleChange} 
+                            style = {{border: submitted && (!values.phone && !values.email) ? "1.4px solid #ff5252": "none"}}
+                            />
                     
                         </div>
                         <div className = 'company'>
@@ -159,12 +184,27 @@ const Contact = () => {
                                 COMPANY
                                 { submitted && !values.company ? <p>*Required</p> : null}
                             </label>
-                            <input type = 'text' name = 'company' value = {values.company} placeholder = 'Company Name' onChange={handleChange}/>
+                            <input 
+                            type = 'text' 
+                            name = 'company' 
+                            value = {values.company} 
+                            placeholder = 'Company Name' 
+                            onChange={handleChange}
+                            style = {{border: submitted && !values.company ? "1.4px solid #ff5252": "none"}}
+                            />
                         </div>
                     </div>
                     <div className = 'input-container message'>
                         <label>MESSAGE</label>
-                        <textarea rows="5" cols="50" type = 'text' name = 'message' placeholder = 'Message . . .' value = {values.message} onChange={handleChange}/>
+                        <textarea 
+                        rows="5" 
+                        cols="50" 
+                        type = 'text' 
+                        name = 'message' 
+                        placeholder = 'Message . . .' 
+                        value = {values.message} 
+                        onChange={handleChange}
+                        />
                     </div>
                     <div className = 'button_message'>
                     <button type = 'submit' >
