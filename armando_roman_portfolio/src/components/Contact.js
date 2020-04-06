@@ -144,7 +144,7 @@ const Contact = () => {
                             value = {values.name} 
                             onChange={handleChange} 
                             placeholder = 'Name'
-                            style = {{border: submitted && !values.name  ? "1.4px solid #ff5252": "none"}}
+                            style = {{border: submitted && !values.name  ? "1.2px solid #ff5252": "none", boxShadow: '0 0 3px #ff5252'}}
 
                             />
                         </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                             value = {values.phone} 
                             placeholder = 'Phone' 
                             onChange={handleChange}
-                            style = {{border: submitted && (!values.phone && !values.email) ? "1.4px solid #ff5252": "none"}}
+                            style = {{border: submitted && (!values.phone && !values.email) ? "1.2px solid #ff5252": "none", boxShadow: '0 0 3px #ff5252'}}
                             />
                         </div>
                     </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                             value = {values.email} 
                             placeholder = 'Email' 
                             onChange={handleChange} 
-                            style = {{border: submitted && (!values.phone && !values.email) ? "1.4px solid #ff5252": "none"}}
+                            style = {{border: submitted && (!values.phone && !values.email) ? "1.2px solid #ff5252": "none", boxShadow: '0 0 3px #ff5252'}}
                             />
                     
                         </div>
@@ -190,7 +190,7 @@ const Contact = () => {
                             value = {values.company} 
                             placeholder = 'Company Name' 
                             onChange={handleChange}
-                            style = {{border: submitted && !values.company ? "1.4px solid #ff5252": "none"}}
+                            style = {{border: submitted && !values.company ? "1.2px solid #ff5252": "none", boxShadow: '0 0 5px #ff5252'}}
                             />
                         </div>
                     </div>
