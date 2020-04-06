@@ -65,9 +65,9 @@
         }
         img{
             height: 100%;
-            filter: drop-shadow(1px 1px 5px $light-grey);
-
+            
             @include xl-tablet{
+                filter: drop-shadow(1px 1px 5px $light-grey);
                 padding: 8px;
                 border-radius: 50%;
                 background: rgba($font-color, 1);
@@ -87,8 +87,11 @@
 
     }
     .dark.off img, .resume.off img{
-        background: $background-color;
-        filter: drop-shadow(1px 1px 5px darken($light-grey, 20%));
+        @include xl-tablet{
+            background: $background-color;
+            filter: drop-shadow(1px 1px 5px darken($light-grey, 20%));
+
+        }
 
     }
 
