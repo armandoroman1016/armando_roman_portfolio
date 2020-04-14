@@ -115,6 +115,7 @@
                     font-family: "Montserrat", "Merriweather", "Times New Roman", Times,
                         serif;
                     padding-left: .6rem;
+
                     &::placeholder {
                         font-size: 1rem;
                     }
@@ -210,7 +211,7 @@
             justify-content: space-between;
             align-content: center;
             height: 10%;
-            
+
             @include xl-tablet {
                 width: 94%;
                 margin: 5% auto;
@@ -237,7 +238,7 @@
                 box-shadow: 2px 2px 5px rgba(lighten($background-color, 5%), .8);
 
                 @include xl-tablet {
-                   padding: .5rem 0;
+                    padding: .5rem 0;
                 }
 
                 @include mobile {
@@ -256,7 +257,7 @@
                 font-weight: 800;
 
                 @include xl-tablet {
-                    font-size:1.4rem;
+                    font-size: 1.4rem;
                     width: auto;
                 }
 
@@ -267,6 +268,31 @@
                     line-height: 1.5;
                 }
             }
+        }
+
+        .social {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            @include mobile{
+                width: 100%;
+                justify-content: center;
+                justify-content: space-between;
+            }
+            .link{
+                margin-left: 2.4rem;
+                @include mobile{
+                    margin: 0;
+                    padding: 1rem 1.4rem 0 1.4rem;
+                }
+                img{
+                    width: 2.4rem;
+                    height: auto;
+
+                }
+            }            
+
+            
         }
     }
 }
@@ -313,30 +339,33 @@
 .circle-two,
 .circle-three {
     transition: background .25s ease-in;
+
     @include xl-tablet {
         display: none;
     }
 }
 
-body.dark-mode .contact-container{
+body.dark-mode .contact-container {
     background: $background-color;
     transition: background .25s ease-in;
-    
-    h2{
+
+    h2 {
         color: $font-color;
         transition: color .25s ease-in;
 
     }
 
-    #contact_form{
+    #contact_form {
 
-        .input-container{
-            label{
+        .input-container {
+            label {
                 color: $font-color;
                 transition: color .25s ease-in;
 
             }
-            input, textarea{
+
+            input,
+            textarea {
                 background: $font-color;
                 transition: background .25s ease-in;
 
@@ -352,7 +381,7 @@ body.dark-mode .contact-container{
         transition: background .25s ease-in;
     }
 
-    .circle-two{
+    .circle-two {
         background: linear-gradient(220deg, $orange 0%, $background-color 100%);
         transition: background .25s ease-in;
     }

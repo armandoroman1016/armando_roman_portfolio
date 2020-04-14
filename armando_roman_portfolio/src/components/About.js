@@ -16,8 +16,7 @@ const About = () =>{
                         That is actually a pretty big reason for me wanting to become a dev in the first place.
                     </p>
                     <p> 
-                        When I'm not at the computer. You can find me out with my family, probably enjoying a some fresh BBQ.
-                        If you would like to chat about the latest technologies, BBQ, fitness, coffee, or the Raiders contact me.
+                    When I'm not at the computer. You can find me out with my family, probably enjoying some fresh BBQ. If you would like to chat about the latest technologies, BBQ, fitness, coffee, or the Raiders contact me.
                     </p>
                 </div>
             </div>

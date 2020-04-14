@@ -1,7 +1,9 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {Elastic, TimelineMax, Power4 } from 'gsap';
 import ClipLoader from 'react-spinners/ClipLoader';
-import Footer from '../components/Footer.js'
+import email from '../assests/images/email.svg'
+import linked from "../assests/images/linked.svg";
+import github from "../assests/images/github.svg";
 
 const encode = (data) => {
     return Object.keys(data)
@@ -220,8 +222,22 @@ const Contact = () => {
                         <p className = 'response-message'>{message}</p>
                         : null 
                     }
+                    <div className="social">
+                        <a href="https://www.linkedin.com/in/armando-roman/" className = 'link'>
+                            <img src={linked} alt="linked in logo" />
+                        </a>
+                        <a href="mailto:armandoroman1016@gmail.com" target="_top" className = 'link'>
+                            <img src = {email} alt = 'email' />
+                        </a>
+                        <a href="https://github.com/armandoroman1016" className = 'link'>
+                            <img src={github} alt="github logo" />
+                        </a>
+                    </div>  
                     </div>
                 </form>
+            </div>
+            <div>
+
             </div>
         </div>
     )
