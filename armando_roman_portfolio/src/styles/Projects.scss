@@ -6,7 +6,7 @@
     max-width: 100vw;
     position: relative;
     transition: background .25s ease-in;
-
+    
     @include xl-tablet {
         min-height: 0;
         padding-bottom: 2rem;
@@ -19,12 +19,12 @@
     }
 
     .projects-container {
-        width: 65%;
+        width: 80%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-left: 18%;
+        margin-left: 15%;
         margin-top: 5%;
 
         @include xl-tablet {
@@ -382,7 +382,7 @@
     }
 
     h4 {
-        text-align: center;
+        // text-align: center;
         font-size:1.2rem;
         font-weight: 800;
         @include xl-tablet {
@@ -396,11 +396,10 @@
     ul {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+
         li {
             font-size: 1rem;
-            margin: 1.2rem ;
+            margin: 0 3rem 0 0;
 
             @include xl-tablet {
                 margin: 1rem 1rem 1rem 0;
