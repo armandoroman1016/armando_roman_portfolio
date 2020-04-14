@@ -270,17 +270,29 @@
             }
         }
 
-        .email.link {
-            // border: 2px solid red;
-            position: absolute;
-            bottom: 1.2rem;
-            right: 0;
-
-            width: 3rem;
-            img{
+        .social {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            @include mobile{
                 width: 100%;
-                height: auto;
+                justify-content: center;
+                justify-content: space-between;
             }
+            .link{
+                margin-left: 2.4rem;
+                @include mobile{
+                    margin: 0;
+                    padding: 1rem 1.4rem 0 1.4rem;
+                }
+                img{
+                    width: 2.4rem;
+                    height: auto;
+
+                }
+            }            
+
+            
         }
     }
 }
