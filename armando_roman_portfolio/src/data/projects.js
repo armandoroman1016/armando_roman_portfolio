@@ -11,7 +11,7 @@ export const projects = [
     desktopMock: celebratrMac,
     mobileMock: celebratrMobile,
     projectDescription:
-      "Celebratr is a full-stack web application that is and iteration of a previous application I had built amongst a group of peers. The reason for rebuilding this app was that I felt the previous version on the app could use a more simple and intuitive UI. ",
+      "Celebratr is a full-stack web application that is an iteration of a previous application I had built amongst a group of peers. The reason for rebuilding this app was that I felt the previous version on the app could use a more simple and intuitive UI. ",
     techStack: ["ReactJS", "Redux", "NodeJS", "ExpressJS", "PostgresQL"],
     projectUrl: "https://celebratr.co",
     previousUrl: "https://elastic-jennings-52d92d.netlify.com/login",
@@ -24,7 +24,7 @@ export const projects = [
     hasMobileMock: false,
     projectName: "Farm Fresh API",
     desktopMock: farmFresh,
-    projectDescription: `Farm fresh is a Web API that allows developers to create an application for 2 user types - Farmers and Shoppers -. The API allows farmers to keep track of their inventory such as tools and produce. They can set prices and keep track of orders that consumers place from the consumer side of the application.`,
+    projectDescription: `Farm fresh is a Web API that allows developers to create an application for 2 user types, farmers and shoppers. The API allows farmers to keep track of their inventory such as tools and produce. They can set prices and keep track of orders that consumers place from the consumer side of the application.`,
     techStack: ["NodeJs", "ExpressJs", "PostgresQL", "Json Web Token", "Knex"],
     projectUrl: "https://farm-fresh-bw.herokuapp.com/docs/",
     githubUrl: "https://github.com/armandoroman1016/farm_fresh_be",
@@ -37,7 +37,7 @@ export const projects = [
     desktopMock:
       "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/2o0jde-pycity-netlify-com.png",
     projectDescription:
-      "PyCity is a Multi User Dungeon - MUD - game. It allows users to register and explore different areas of a procedurally generated map of buildings around a town. The players moves are updated in the DB and allows for encounter of other users across the map",
+      "PyCity is a Multi-User Dungeon - MUD - game. It allows users to register and explore different areas of a procedurally generated map of buildings around a town. The players' moves are updated in the DB and allows for the encounter of other users across the map.",
     techStack: ["ReactJS", "Axios", "Python", "OOP"],
     projectUrl: "https://pycity.netlify.com/register",
     githubUrl: "https://github.com/cs26-bw",

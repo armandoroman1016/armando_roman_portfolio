@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import {Elastic, TimelineMax, Power4 } from 'gsap';
 import ClipLoader from 'react-spinners/ClipLoader';
-import Footer from '../components/Footer.js'
+import email from '../assests/images/email.svg'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -220,8 +220,14 @@ const Contact = () => {
                         <p className = 'response-message'>{message}</p>
                         : null 
                     }
+                    <a href="mailto:armandoroman1016@gmail.com" target="_top" className = 'email link'>
+                        <img src = {email} alt = 'email' />
+                    </a>  
                     </div>
                 </form>
+            </div>
+            <div>
+
             </div>
         </div>
     )
