@@ -1,15 +1,13 @@
-import celebratrMobile from "../assests/images/celebratrMobile.png";
-import celebratrMac from "../assests/images/celebratrMac.png";
-import farmFresh from "../assests/images/farmFresh.png";
 import tacosMobile from "../assests/images/tacosMobile.png";
 import tacosMac from "../assests/images/tacosMac.png";
+
 export const projects = [
   {
     id: 2,
     hasMobileMock: true,
     projectName: "Celebratr",
-    desktopMock: celebratrMac,
-    mobileMock: celebratrMobile,
+    desktopMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/51oe1k-celebratr-co.png",
+    mobileMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/5871m9-celebratr-co.png",
     projectDescription:
       "Celebratr is a full-stack web application that is an iteration of a previous application I had built amongst a group of peers. The reason for rebuilding this app was that I felt the previous version on the app could use a more simple and intuitive UI. ",
     techStack: ["ReactJS", "Redux", "NodeJS", "ExpressJS", "PostgresQL"],
@@ -23,7 +21,7 @@ export const projects = [
     id: 3,
     hasMobileMock: false,
     projectName: "Farm Fresh API",
-    desktopMock: farmFresh,
+    desktopMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/5xjo9o-farm-fresh-bw-herokuapp-com.png",
     projectDescription: `Farm fresh is a Web API that allows developers to create an application for 2 user types, farmers and shoppers. The API allows farmers to keep track of their inventory such as tools and produce. They can set prices and keep track of orders that consumers place from the consumer side of the application.`,
     techStack: ["NodeJs", "ExpressJs", "PostgresQL", "Json Web Token", "Knex"],
     projectUrl: "https://farm-fresh-bw.herokuapp.com/docs/",
@@ -52,5 +50,16 @@ export const projects = [
     techStack: ["HTML", "CSS3", "Javascript"],
     projectUrl: "https://todoslostacos.netlify.com/",
     githubUrl: "https://github.com/armandoroman1016/tacos_site",
+  },
+  {
+    id: 5,
+    hasMobileMock: true,
+    projectName: "Quarantine Cook",
+    desktopMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/2m60x8-quarantine-cook-com.png",
+    mobileMock: "https://screenpeek.nyc3.digitaloceanspaces.com/screenshots/q4j31v-quarantine-cook-com.png",
+    projectDescription: `Todo Los Tacos is a simple website that is written in HTML, CSS, and Vanilla Javascript.`,
+    techStack: ["HTML", "CSS3", "Javascript"],
+    projectUrl: "https://quarantine-cook.com/kitchen",
+    githubUrl: "https://github.com/armandoroman1016/quarantine-cook",
   },
 ];

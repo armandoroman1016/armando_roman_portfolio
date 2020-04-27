@@ -39,11 +39,13 @@ const Project = props => {
 
                                     {project.mobileMock && 
                                         <img src = {project.mobileMock} 
+                                        onClick = {() => window.open(project.projectUrl, "_blank")}
                                         className={ project.desktopMock ? `project-img mobile` :  `project-img mobile no-desktop`} 
                                         alt='project-snapshot' /> }
                                         
                                         {project.desktopMock && 
                                             <img src={project.desktopMock} 
+                                            onClick = {() => window.open(project.projectUrl, "_blank")}
                                             className = { project.mobileMock ? 'project-img desktop' : 'project-img desktop no-mobile' } 
                                             alt='project-snapshot' /> }
 
