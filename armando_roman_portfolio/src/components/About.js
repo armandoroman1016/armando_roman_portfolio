@@ -3,7 +3,7 @@ import React from 'react'
 const About = () =>{
     
     return(
-        <section className = 'about-container page' id = "about-container">
+        <section className = 'about-container'>
             <div className = 'about-text'>
                 <h2>Who Is Armando Roman<span> ?</span></h2>
                 <div  className = 'copy'>
@@ -16,7 +16,7 @@ const About = () =>{
                         That is actually a pretty big reason for me wanting to become a dev in the first place.
                     </p>
                     <p> 
-                    When I'm not at the computer. You can find me out with my family, probably enjoying some fresh BBQ. If you would like to chat about the latest technologies, BBQ, fitness, coffee, or the Raiders contact me.
+                    When I'm not at the computer. You can find me out with my family, probably enjoying some fresh BBQ. If you would like to chat about the latest technologies, coffee, or the Raiders contact me.
                     </p>
                 </div>
             </div>
