@@ -442,3 +442,23 @@ body.dark-mode .projects-section{
         
     }
 }
+
+.parent_project{
+    transform: translateX(75vw);
+    opacity: 0.1;
+    transition: transform .75s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+, opacity .75s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+;   
+    @include xl-tablet{
+
+    }
+
+}
+
+.parent_project.fade_in{
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .75s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+, opacity .75s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+;
+}
