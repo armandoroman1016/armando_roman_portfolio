@@ -1,65 +1,70 @@
 {
-  "name": "armando_roman_portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:3000",
-  "presets": [
-    "@babel/preset-react",
-    "@babel/preset-env"
-  ],
-  "plugins": [
-    "emotion"
-  ],
-  "dependencies": {
-    "axios": "^0.19.0",
-    "dotenv": "^8.1.0",
-    "formik": "^1.5.8",
-    "gsap": "^2.1.3",
-    "node-sass": "^4.12.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-reveal": "^1.2.2",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "react-scroll": "^1.7.16",
-    "react-spinners": "^0.6.1",
-    "yup": "^0.27.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "armando_roman_portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "proxy": "http://localhost:3000",
+    "presets": [
+        "@babel/preset-react",
+        "@babel/preset-env"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "prettier": "^2.0.5"
-  },
-  "prettier": {
-    "jsxSingleQuote": false,
-    "printWidth": 80,
-    "tabWidth": 4,
-    "bracketSpacing": true,
-    "trailingComma": "es5",
-    "jsxBrackets": true
-  }
+    "plugins": [
+        "emotion"
+    ],
+    "dependencies": {
+        "axios": "^1.2.1",
+        "dotenv": "^16.0.3",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "formik": "^2.2.9",
+        "gsap": "^3.11.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router": "^6.4.5",
+        "react-router-dom": "^6.4.5",
+        "react-scripts": "^5.0.1",
+        "react-scroll": "^1.7.16",
+        "react-spinners": "^0.13.7",
+        "router-dom": "^2.2.9",
+        "sass": "^1.56.1",
+        "yup": "^0.32.11"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "eslint-plugin-react": "^7.20.0",
+        "eslint-plugin-react-hooks": "^4.0.4",
+        "prettier": "^2.0.5",
+        "typescript": "^4.9.4"
+    },
+    "prettier": {
+        "jsxSingleQuote": false,
+        "printWidth": 80,
+        "tabWidth": 4,
+        "bracketSpacing": true,
+        "trailingComma": "es5",
+        "jsxBrackets": true
+    },
+    "volta": {
+        "node": "18.12.1",
+        "npm": "9.2.0"
+    }
 }
